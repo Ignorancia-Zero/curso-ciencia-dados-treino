@@ -26,6 +26,7 @@ De cara, nós vamos utilizar as seguintes bibliotecas:
 - pandas
 - pyarrow
 - requests
+- yaml
 - tqdm
 
 Leia mais em https://www.javatpoint.com/how-to-create-requirements-txt-file-in-python
