@@ -14,7 +14,8 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     deve funcionar para baixar dados do INEP
     """
 
-    # URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"  # URL base para todos os micro-dados do INEP
+    # URL base para todos os micro-dados do INEP
+    # URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"
     URL: str = "https://iz-ccdd.herokuapp.com/"
 
     _base: str  # lista de bases que devem ser baixadas
@@ -45,7 +46,7 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         self._base = base.replace("-", "_")
         self._sub_pasta = base.replace("-", "_").replace(" ", "_")
         self._ano = ano
-        self._url = f"{self.URL}/{base}.php"
+        self._url = f"{self.URL}/{base}"
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -108,7 +109,7 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         for arq, df in self.dados_saida.items():
             df.drop(columns="ANO")
-            caminho = self.caminho_saida / f"{self}/ANO={self.ano}"
+            caminho = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
             caminho.mkdir(parents=True, exist_ok=True)
             df.to_parquet(
                 caminho / f"{arq}.parquet",
