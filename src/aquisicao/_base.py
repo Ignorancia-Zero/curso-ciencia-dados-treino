@@ -54,8 +54,8 @@ class _BaseETL(abc.ABC):
 
     def __init__(
         self,
-        entrada: str,
-        saida: str,
+        entrada: typing.Union[str, Path],
+        saida: typing.Union[str, Path],
         criar_caminho: bool = True,
         reprocessar: bool = True,
     ) -> None:
@@ -98,7 +98,7 @@ class _BaseETL(abc.ABC):
 
     @abc.abstractmethod
     @property
-    def bases_entrada(self) -> str:
+    def bases_entrada(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de entrada
 
@@ -108,7 +108,7 @@ class _BaseETL(abc.ABC):
 
     @abc.abstractmethod
     @property
-    def bases_saida(self) -> str:
+    def bases_saida(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de saída
 
@@ -163,6 +163,13 @@ class _BaseETL(abc.ABC):
         """
         raise NotImplementedError
 
+    def _load(self) -> None:
+        """
+        Método load protegido que carrega as bases de saída
+        """
+        for arq, df in self.dados_saida.items():
+            df.to_parquet(self.caminho_saida / f"{arq}.parquet", index=False)
+
     def extract(self) -> None:
         """
         Extraí os dados do objeto
@@ -194,8 +201,7 @@ class _BaseETL(abc.ABC):
         self._logger.info(f"CARREGANDO DADOS DO OBJETO > {self}")
         saidas = set(os.listdir(self.caminho_saida))
         if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
-            for arq, df in self.dados_saida.items():
-                df.to_parquet(self.caminho_saida / arq, index=False)
+            self._load()
 
     def pipeline(self) -> None:
         """
