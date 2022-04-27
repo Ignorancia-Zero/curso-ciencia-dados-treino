@@ -3,7 +3,7 @@ from pathlib import Path
 import click
 
 import src.configs as conf_geral
-from src.aquisicao.opcoes import ETL_DICT
+from src.aquisicao.executa import executa_etl
 from src.aquisicao.opcoes import EnumETL
 from src.utils.logs import configura_logs
 
@@ -66,8 +66,13 @@ def processa_dado(
     :param reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
     """
     configura_logs()
-    objeto = ETL_DICT[EnumETL(etl)](entrada, saida, criar_caminho, reprocessar)
-    objeto.pipeline()
+    executa_etl(
+        etl=etl,
+        entrada=entrada,
+        saida=saida,
+        criar_caminho=criar_caminho,
+        reprocessar=reprocessar
+    )
 
 
 if __name__ == "__main__":
