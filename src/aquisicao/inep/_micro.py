@@ -8,7 +8,7 @@ from src.utils.web import download_dados_web
 from src.utils.web import obtem_pagina
 
 
-class BaseINEPETL(_BaseETL, abc.ABC):
+class _BaseINEPETL(_BaseETL, abc.ABC):
     """
     Classe que estrutura como qualquer objeto de ETL
     deve funcionar para baixar dados do INEP
