@@ -5,6 +5,7 @@ import click
 import src.configs as conf_geral
 from src.aquisicao.opcoes import ETL_DICT
 from src.aquisicao.opcoes import EnumETL
+from src.utils.logs import configura_logs
 
 
 @click.group()
@@ -64,6 +65,7 @@ def processa_dado(
     :param criar_caminho: flag indicando se devemos criar os caminhos
     :param reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
     """
+    configura_logs()
     objeto = ETL_DICT[EnumETL(etl)](entrada, saida, criar_caminho, reprocessar)
     objeto.pipeline()
 

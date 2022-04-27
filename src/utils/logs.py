@@ -48,7 +48,7 @@ def configura_logs(
         )
         fhandler.setLevel(logging.INFO)
 
-        # ajusta a formataçõa
+        # ajusta a formatação
         fhandler.setFormatter(formatter)
         logger_raiz.addHandler(fhandler)
 
