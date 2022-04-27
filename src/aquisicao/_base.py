@@ -90,6 +90,7 @@ class _BaseETL(abc.ABC):
     def dados_entrada(self) -> typing.Dict[str, pd.DataFrame]:
         """
         Acessa o dicionário de dados de entrada
+
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
         if self._dados_entrada is None:
@@ -135,6 +136,7 @@ class _BaseETL(abc.ABC):
     def dados_saida(self) -> typing.Dict[str, pd.DataFrame]:
         """
         Acessa o dicionário de dados de saída
+
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
         if self._dados_saida is None:
