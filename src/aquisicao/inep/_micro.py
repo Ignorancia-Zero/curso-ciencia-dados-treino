@@ -14,7 +14,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     deve funcionar para baixar dados do INEP
     """
 
-    URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"  # URL base para todos os micro-dados do INEP
+    # URL base para todos os micro-dados do INEP
+    # URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"
+    URL: str = "https://iz-ccdd.herokuapp.com/"
 
     _base: str  # lista de bases que devem ser baixadas
     _url: str  # URL completa a lista de micro-dados
@@ -31,7 +33,6 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     ) -> None:
         """
         Instância o objeto de ETL INEP
-
         :param entrada: string com caminho para pasta de entrada
         :param saida: string com caminho para pasta de saída
         :param base: Nome da base que vai na URL do INEP
@@ -42,6 +43,7 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         super().__init__(entrada, saida, criar_caminho, reprocessar)
 
         self._base = base.replace("-", "_")
+        self._sub_pasta = base.replace("-", "_").replace(" ", "_")
         self._ano = ano
         self._url = f"{self.URL}/{base}"
 
@@ -51,13 +53,13 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Realiza o web-scraping da página de dados do INEP e popula
         um dicionário com o nome de cada base disponível e o link
         para baixar os dados
-
         :return: dicionário com nome do arquivo e link para a página
         """
+
         if not hasattr(self, "_inep"):
             soup = obtem_pagina(self._url)
             self._inep = {
-                tag["href"].split("_")[-1]: tag["href"]
+                tag.text[::-1][:4][::-1] + ".zip": tag["href"]
                 for tag in soup.find_all("a", {"class": "external-link"})
             }
         return self._inep
@@ -66,14 +68,16 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     def ano(self) -> int:
         """
         Ano da base sendo processado pelo objeto
-
         :return: ano como um número inteiro
         """
         if isinstance(self._ano, str):
             if self._ano == "ultimo":
                 return max([int(b[:4]) for b in self.inep])
             else:
-                raise ValueError(f"Não conseguimos processar ano={self._ano}")
+                if self._ano.isnumeric():
+                    return int(self._ano)
+                else:
+                    raise ValueError(f"Não conseguimos processar ano={self._ano}")
         else:
             return self._ano
 
@@ -81,7 +85,6 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     def bases_entrada(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de entrada
-
         :return: lista de arquivos que compõem as bases de entrada
         """
         return [b for b in self.inep if int(b[:4]) == self.ano]
@@ -90,9 +93,11 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         Realiza o download das bases de dados que serão utilizadas pelo objeto
         """
-        for base, link in self._inep.items():
-            if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
-                download_dados_web(self.caminho_entrada / base, link)
+        base = f"{self.ano}.zip"
+        caminho = self.caminho_entrada / f"{self._sub_pasta}"
+        link = self.inep[base]
+        if base not in os.listdir(caminho) or self.reprocessar:
+            download_dados_web(caminho / base, link)
 
     def _load(self) -> None:
         """
@@ -100,6 +105,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         for arq, df in self.dados_saida.items():
             df.drop(columns="ANO")
+            caminho = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
+            caminho.mkdir(parents=True, exist_ok=True)
             df.to_parquet(
-                self.caminho_saida / f"ANO={self.ano}/{arq}.parquet", index=False
+                caminho / f"{arq}.parquet",
+                index=False,
             )

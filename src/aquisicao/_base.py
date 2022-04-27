@@ -1,7 +1,7 @@
 import abc
+import logging
 import os
 import typing
-import logging
 from pathlib import Path
 
 import pandas as pd
@@ -10,33 +10,26 @@ import pandas as pd
 class _BaseETL(abc.ABC):
     """
     Esta classe representa o esqueleto padrão de um objeto ETL
-
     Neste objeto deverão ser informados os caminhos para as pastas
     de entrada e de saída de dados, além de uma flag informando se
     nós devemos re-processar os dados.
-
     Para executar o ETL, o usuário geralmente chamará o método
     pipeline, na qual executaremos sequencialmente o extract, transform
     e load.
-
     Para o extract, será checado se as bases_entrada estão disponíveis.
     Se for o caso, e a flag reprocessar estiver desativada, nós não iremos
     fazer o download dos dados, mas apenas a extração do mesmo
-
     Para o transform, será checado se as bases_saida estão disponíveis.
     Se for o caso, e a flag reprocessar estiver desativada, nós iremos carregar
     os dados do disco no dicionário de bases de saída, caso contrário nós
     vamos executar o método _transform
-
     Para o load, será checado se as bases_saida estão disponíveis.
     Se for o caso, e a flag reprocessar estiver desativada, nós não iremos fazer
     nada, caso contrário nós iremos exportar as bases como parquet
-
     Por fim, para o pipeline nós iremos verificar se existe alguma necessidade
     de reprocessamento dos dados, seja porque os dados de entrada ou saída estão
     indisponíveis, ou porque a flag reprocessar está ativada. Se houver necessidade
     de gerar os dados, então as etapas do processo serão executadas
-
     Por definição cada objeto irá definir o conjunto de métodos:
     - bases_entrada: Lista as bases que fazem parte da entrada do objeto
     - bases_saida: Lista as bases que fazem parte da saída do objeto
@@ -48,8 +41,8 @@ class _BaseETL(abc.ABC):
     caminho_entrada: Path
     caminho_saida: Path
     reprocessar: bool
-    _dados_entrada: typing.Union[None, typing.Dict[str, pd.DataFrame]]
-    _dados_saida: typing.Union[None, typing.Dict[str, pd.DataFrame]]
+    _dados_entrada: typing.Dict[str, pd.DataFrame]
+    _dados_saida: typing.Dict[str, pd.DataFrame]
     _logger: logging.Logger
 
     def __init__(
@@ -61,7 +54,6 @@ class _BaseETL(abc.ABC):
     ) -> None:
         """
         Instância o objeto de ETL Base
-
         :param entrada: string com caminho para pasta de entrada
         :param saida: string com caminho para pasta de saída
         :param criar_caminho: flag indicando se devemos criar os caminhos
@@ -75,8 +67,8 @@ class _BaseETL(abc.ABC):
             self.caminho_entrada.mkdir(parents=True, exist_ok=True)
             self.caminho_saida.mkdir(parents=True, exist_ok=True)
 
-        self._dados_entrada = None
-        self._dados_saida = None
+        self._dados_entrada = dict()
+        self._dados_saida = dict()
 
         self._logger = logging.getLogger(__name__)
 
@@ -96,22 +88,20 @@ class _BaseETL(abc.ABC):
             self.extract()
         return self._dados_entrada
 
-    @abc.abstractmethod
     @property
+    @abc.abstractmethod
     def bases_entrada(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de entrada
-
         :return: lista de arquivos que compõem as bases de entrada
         """
         raise NotImplementedError
 
-    @abc.abstractmethod
     @property
+    @abc.abstractmethod
     def bases_saida(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de saída
-
         :return: lista de arquivos que compõem as bases de saída
         """
         raise NotImplementedError
@@ -120,7 +110,6 @@ class _BaseETL(abc.ABC):
     def precisa_reprocessar(self) -> bool:
         """
         Indica se há necessidade de reprocessar os dados
-
         :return: True se algum dado está faltando
         """
         dados = set(os.listdir(self.caminho_entrada))
