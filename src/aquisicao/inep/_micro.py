@@ -14,7 +14,8 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     deve funcionar para baixar dados do INEP
     """
 
-    URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"  # URL base para todos os micro-dados do INEP
+    # URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"  # URL base para todos os micro-dados do INEP
+    URL: str = "https://iz-ccdd.herokuapp.com/"
 
     _base: str  # lista de bases que devem ser baixadas
     _url: str  # URL completa a lista de micro-dados
@@ -42,8 +43,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         super().__init__(entrada, saida, criar_caminho, reprocessar)
 
         self._base = base.replace("-", "_")
+        self._sub_pasta = base.replace("-", "_").replace(" ", "_")
         self._ano = ano
-        self._url = f"{self.URL}/{base}"
+        self._url = f"{self.URL}/{base}.php"
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -58,7 +60,7 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         if not hasattr(self, "_inep"):
             soup = obtem_pagina(self._url)
             self._inep = {
-                tag["href"].split("_")[-1]: tag["href"]
+                tag.text[::-1][:4][::-1] + ".zip": tag["href"]
                 for tag in soup.find_all("a", {"class": "external-link"})
             }
         return self._inep
@@ -95,9 +97,10 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Realiza o download das bases de dados que serão utilizadas pelo objeto
         """
         base = f"{self.ano}.zip"
+        caminho = self.caminho_entrada / f"{self._sub_pasta}"
         link = self.inep[base]
-        if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
-            download_dados_web(self.caminho_entrada / base, link)
+        if base not in os.listdir(caminho) or self.reprocessar:
+            download_dados_web(caminho / base, link)
 
     def _load(self) -> None:
         """
@@ -105,10 +108,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         for arq, df in self.dados_saida.items():
             df.drop(columns="ANO")
+            caminho = self.caminho_saida / f"{self}/ANO={self.ano}"
+            caminho.mkdir(parents=True, exist_ok=True)
             df.to_parquet(
-                self.caminho_saida
-                / f"{self._base.replace('-', '_').replace(' ', '_')}/"
-                f"ANO={self.ano}/"
-                f"{arq}.parquet",
+                caminho / f"{arq}.parquet",
                 index=False,
             )

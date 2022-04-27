@@ -48,8 +48,8 @@ class _BaseETL(abc.ABC):
     caminho_entrada: Path
     caminho_saida: Path
     reprocessar: bool
-    _dados_entrada: typing.Union[None, typing.Dict[str, pd.DataFrame]]
-    _dados_saida: typing.Union[None, typing.Dict[str, pd.DataFrame]]
+    _dados_entrada: typing.Dict[str, pd.DataFrame]
+    _dados_saida: typing.Dict[str, pd.DataFrame]
     _logger: logging.Logger
 
     def __init__(
@@ -75,8 +75,8 @@ class _BaseETL(abc.ABC):
             self.caminho_entrada.mkdir(parents=True, exist_ok=True)
             self.caminho_saida.mkdir(parents=True, exist_ok=True)
 
-        self._dados_entrada = None
-        self._dados_saida = None
+        self._dados_entrada = dict()
+        self._dados_saida = dict()
 
         self._logger = logging.getLogger(__name__)
 
