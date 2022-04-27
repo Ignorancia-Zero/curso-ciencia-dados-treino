@@ -106,5 +106,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         for arq, df in self.dados_saida.items():
             df.drop(columns="ANO")
             df.to_parquet(
-                self.caminho_saida / f"ANO={self.ano}/{arq}.parquet", index=False
+                self.caminho_saida
+                / f"{self._base.replace('-', '_').replace(' ', '_')}/"
+                f"ANO={self.ano}/"
+                f"{arq}.parquet",
+                index=False,
             )
