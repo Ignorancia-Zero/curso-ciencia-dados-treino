@@ -24,7 +24,12 @@ def executa_etl(
 
 @log_erros
 def executa_micro_inep(
-    etl: str, ano: str, entrada: Path, saida: Path, criar_caminho: bool, reprocessar: bool
+    etl: str,
+    ano: str,
+    entrada: Path,
+    saida: Path,
+    criar_caminho: bool,
+    reprocessar: bool,
 ) -> None:
     """
     Executa o pipeline de ETL de uma determinada fonte

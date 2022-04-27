@@ -1,7 +1,7 @@
 import abc
+import logging
 import os
 import typing
-import logging
 from pathlib import Path
 
 import pandas as pd
