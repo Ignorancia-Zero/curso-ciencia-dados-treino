@@ -1,7 +1,8 @@
 # Dicionário que renomeia as colunas de diferentes anos de dados
 # para garantir que as bases entre nomes tenham o mesmo conteúdo
 RENOMEIA_COLUNAS:
-  "ANO_CENSO": "NU_ANO_CENSO"
+  "NU_ANO_CENSO": "ANO"
+  "ANO_CENSO": "ANO"
   "PK_COD_ENTIDADE": "CO_ENTIDADE"
   "COD_ORGAO_REGIONAL_INEP": "CO_ORGAO_REGIONAL"
   "DESC_SITUACAO_FUNCIONAMENTO": "TP_SITUACAO_FUNCIONAMENTO"
@@ -593,105 +594,6 @@ COLS_88888:
   - "QT_EQUIP_SOM"
   - "QT_EQUIP_TV"
   - "QT_EQUIP_MULTIMIDIA"
-
-
-# Lista de colunas que devem ser preenchidas com valores anteriores
-# ou posteriores para uma determinada escola
-COLS_FBFILL:
-  - "TP_DEPENDENCIA"
-  - "TP_CATEGORIA_ESCOLA_PRIVADA"
-  - "TP_CONVENIADA_PP"
-  - "TP_MANT_ESCOLA_PRIVADA_EMP"
-  - "TP_MANT_ESCOLA_PRIVADA_ONG"
-  - "TP_MANT_ESCOLA_PRIVADA_SIND" # não existem o censo de 2007 e 2008
-  - "TP_MANT_ESCOLA_PRIVADA_S_FINS" # não existem o censo de 2007 e 2008
-  - "TP_REGULAMENTACAO"
-  - "IN_LOCAL_FUNC_PREDIO_ESCOLAR"
-  - "IN_LOCAL_FUNC_PRISIONAL_SOCIO"
-  - "IN_LOCAL_FUNC_GALPAO"
-  - "IN_LOCAL_FUNC_SALAS_OUTRA_ESC"
-  - "IN_LOCAL_FUNC_OUTROS"
-  - "IN_PREDIO_COMPARTILHADO"
-  - "IN_AGUA_REDE_PUBLICA"
-  - "IN_AGUA_POCO_ARTESIANO"
-  - "IN_AGUA_CACIMBA"
-  - "IN_AGUA_FONTE_RIO"
-  - "IN_AGUA_INEXISTENTE"
-  - "IN_ENERGIA_REDE_PUBLICA"
-  - "IN_ENERGIA_INEXISTENTE"
-  - "IN_ENERGIA_GERADOR"
-  - "IN_ENERGIA_OUTROS"
-  - "IN_ESGOTO_REDE_PUBLICA"
-  - "IN_ESGOTO_FOSSA"
-  - "IN_ESGOTO_INEXISTENTE"
-  - "IN_LIXO_SERVICO_COLETA"
-  - "IN_LIXO_QUEIMA"
-  - "IN_LIXO_DESCARTA_OUTRA_AREA"
-  - "IN_TRATAMENTO_LIXO_RECICLAGEM"
-  - "IN_LIXO_ENTERRA"
-  - "IN_LIXO_DESTINO_FINAL_PUBLICO"
-  - "IN_BANHEIRO_PNE"
-  - "IN_BIBLIOTECA_SALA_LEITURA"
-  - "IN_COZINHA"
-  - "IN_LABORATORIO_CIENCIAS"
-  - "IN_LABORATORIO_INFORMATICA"
-  - "IN_PARQUE_INFANTIL"
-  - "IN_QUADRA_ESPORTES"
-  - "IN_SALA_DIRETORIA"
-  - "IN_SALA_PROFESSOR"
-  - "IN_SALA_ATENDIMENTO_ESPECIAL"
-  - "IN_DEPENDENCIAS_OUTRAS"
-  - "QT_SALAS_UTILIZADAS"
-  - "IN_EQUIP_TV"
-  - "IN_EQUIP_DVD"
-  - "IN_EQUIP_PARABOLICA"
-  - "IN_EQUIP_COPIADORA"
-  - "IN_EQUIP_IMPRESSORA"
-  - "IN_DESKTOP"
-  - "IN_INTERNET"
-  - "IN_ALIMENTACAO"
-  - "IN_EDUCACAO_INDIGENA"
-  - "TP_INDIGENA_LINGUA"
-  - "IN_MATERIAL_PED_ETNICO"
-  - "IN_MATERIAL_PED_NENHUM"
-  - "IN_MATERIAL_PED_INDIGENA"
-  - "IN_LOCAL_FUNC_SALAS_EMPRESA" # não existem o censo de 2019 e 2020
-  - "IN_LOCAL_FUNC_TEMPLO_IGREJA" # não existem o censo de 2019 e 2020
-  - "IN_LOCAL_FUNC_CASA_PROFESSOR" # não existem o censo de 2019 e 2020
-  - "IN_BANHEIRO_FORA_PREDIO" # não existem o censo de 2019 e 2020
-  - "IN_BANHEIRO_DENTRO_PREDIO" # não existem o censo de 2019 e 2020
-  - "IN_EQUIP_RETRO" # não existem o censo de 2019 e 2020
-  - "IN_EQUIP_VIDEOCASSETE" # não existem o censo de 2019 e 2020
-  - "IN_BANHEIRO_EI" # não existem o censo de 2007 e 2008
-  - "IN_SALA_LEITURA" # não existem o censo de 2007 e 2008
-  - "IN_BIBLIOTECA" # não existem o censo de 2007 e 2008
-  - "IN_BANDA_LARGA" # não existem em 2007
-  - "IN_BERCARIO" # não existem em 2007 2008 2019 2020
-  - "IN_QUADRA_ESPORTES_COBERTA" # não existem antes de 2011
-  - "IN_QUADRA_ESPORTES_DESCOBERTA" # não existem antes de 2011
-  - "TP_OCUPACAO_PREDIO_ESCOLAR" # não existem antes de 2011
-  - "IN_PATIO_DESCOBERTO" # não existem antes de 2012
-  - "TP_MANT_ESCOLA_PRIVADA_SIST_S" # não existem antes de 2012
-  - "IN_AREA_VERDE" # não existem antes de 2012
-  - "IN_DORMITORIO_PROFESSOR" # não existem antes de 2012
-  - "IN_PATIO_COBERTO" # não existem antes de 2012
-  - "IN_AUDITORIO" # não existem antes de 2012
-  - "IN_ALMOXARIFADO" # não existem antes de 2012
-  - "IN_DESPENSA" # não existem antes de 2012
-  - "IN_REFEITORIO" # não existem antes de 2012
-  - "IN_BANHEIRO_CHUVEIRO" # não existem antes de 2012
-  - "IN_SECRETARIA" # não existem antes de 2012
-  - "IN_DORMITORIO_ALUNO" # não existem antes de 2012
-  - "IN_EQUIP_SOM" # não existem antes de 2012
-  - "IN_EQUIP_MULTIMIDIA" # não existem antes de 2012
-  - "IN_LOCAL_FUNC_SOCIOEDUCATIVO" # não existem antes de 2012
-  - "IN_EQUIP_FAX" # só existe de 2012 a 2018
-  - "IN_FINAL_SEMANA" # só existe de 2012 a 2018
-  - "IN_BRASIL_ALFABETIZADO" # só existe de 2012 a 2018
-  - "IN_EQUIP_FOTO" # só existe de 2012 a 2018
-  - "IN_LAVANDERIA" # só existe de 2012 a 2018
-  - "IN_EQUIP_IMPRESSORA_MULT" # só existe de 2015 em diante
-  - "TP_OCUPACAO_GALPAO" # só existe de 2012 em diante
 
 # Lista de colunas que devem ser removidas na base consolidada porque
 # são reduntantes com relação a outras criadas ao longo do processo
