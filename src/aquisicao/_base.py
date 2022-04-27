@@ -1,6 +1,7 @@
 import abc
 import os
 import typing
+import logging
 from pathlib import Path
 
 import pandas as pd
@@ -49,6 +50,7 @@ class _BaseETL(abc.ABC):
     reprocessar: bool
     _dados_entrada: typing.Union[None, typing.Dict[str, pd.DataFrame]]
     _dados_saida: typing.Union[None, typing.Dict[str, pd.DataFrame]]
+    _logger: logging.Logger
 
     def __init__(
         self,
@@ -75,6 +77,14 @@ class _BaseETL(abc.ABC):
 
         self._dados_entrada = None
         self._dados_saida = None
+
+        self._logger = logging.getLogger(__name__)
+
+    def __str__(self) -> str:
+        """
+        Representação de texto da classe
+        """
+        return self.__class__.__name__
 
     @property
     def dados_entrada(self) -> typing.Dict[str, pd.DataFrame]:
@@ -157,7 +167,7 @@ class _BaseETL(abc.ABC):
         """
         Extraí os dados do objeto
         """
-        print("EXTRAINDO DADOS DO OBJETO >", self.__class__.__name__)
+        self._logger.info(f"EXTRAINDO DADOS DO OBJETO > {self}")
         dados = set(os.listdir(self.caminho_entrada))
         if not dados.issuperset(set(self.bases_entrada)) or self.reprocessar:
             self._download()
@@ -167,7 +177,7 @@ class _BaseETL(abc.ABC):
         """
         Extraí os dados do objeto
         """
-        print("TRANSFORMANDO DADOS DO OBJETO >", self.__class__.__name__)
+        self._logger.info(f"TRANSFORMANDO DADOS DO OBJETO > {self}")
         saidas = set(os.listdir(self.caminho_saida))
         if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
             self._transform()
@@ -181,6 +191,7 @@ class _BaseETL(abc.ABC):
         """
         Exporta os dados transformados
         """
+        self._logger.info(f"CARREGANDO DADOS DO OBJETO > {self}")
         saidas = set(os.listdir(self.caminho_saida))
         if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
             for arq, df in self.dados_saida.items():
