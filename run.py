@@ -42,21 +42,19 @@ def aquisicao():
     help="Pasta para carregamento dos dados de aquisição",
 )
 @click.option(
-    "--criar-caminho",
+    "--nao-criar-caminho",
     is_flag=True,
     show_default=True,
-    default=True,
     help="Flag indicando se devemos criar os caminhos",
 )
 @click.option(
-    "--reprocessar",
+    "--nao-reprocessar",
     is_flag=True,
     show_default=True,
-    default=True,
     help="Flag indicando se nós devemos forçar o reprocessamento dos dados",
 )
 def processa_dado(
-    etl: str, entrada: str, saida: str, criar_caminho: bool, reprocessar: bool
+    etl: str, entrada: str, saida: str, nao_criar_caminho: bool, nao_reprocessar: bool
 ) -> None:
     """
     Executa o pipeline de ETL de uma determinada fonte
@@ -64,16 +62,16 @@ def processa_dado(
     :param etl: nome do ETL a ser executado
     :param entrada: string com caminho para pasta de entrada
     :param saida: string com caminho para pasta de saída
-    :param criar_caminho: flag indicando se devemos criar os caminhos
-    :param reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
+    :param nao_criar_caminho: flag indicando se devemos criar os caminhos
+    :param nao_reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
     """
     configura_logs()
     executa_etl(
         etl=etl,
         entrada=entrada,
         saida=saida,
-        criar_caminho=criar_caminho,
-        reprocessar=reprocessar
+        criar_caminho=not nao_criar_caminho,
+        reprocessar=not nao_reprocessar
     )
 
 
@@ -101,21 +99,19 @@ def processa_dado(
     help="Pasta para carregamento dos dados de aquisição",
 )
 @click.option(
-    "--criar-caminho",
+    "--nao-criar-caminho",
     is_flag=True,
     show_default=True,
-    default=True,
     help="Flag indicando se devemos criar os caminhos",
 )
 @click.option(
-    "--reprocessar",
+    "--nao-reprocessar",
     is_flag=True,
     show_default=True,
-    default=True,
     help="Flag indicando se nós devemos forçar o reprocessamento dos dados",
 )
 def processa_micro_inep(
-    etl: str, ano: str, entrada: str, saida: str, criar_caminho: bool, reprocessar: bool
+    etl: str, ano: str, entrada: str, saida: str, nao_criar_caminho: bool, nao_reprocessar: bool
 ) -> None:
     """
     Executa o pipeline de ETL de um micro-dado do INEP para um ano determinado
@@ -124,8 +120,8 @@ def processa_micro_inep(
     :param ano: ano da base a ser processada
     :param entrada: string com caminho para pasta de entrada
     :param saida: string com caminho para pasta de saída
-    :param criar_caminho: flag indicando se devemos criar os caminhos
-    :param reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
+    :param nao_criar_caminho: flag indicando se devemos criar os caminhos
+    :param nao_reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
     """
     configura_logs()
     executa_micro_inep(
@@ -133,8 +129,8 @@ def processa_micro_inep(
         ano=ano,
         entrada=entrada,
         saida=saida,
-        criar_caminho=criar_caminho,
-        reprocessar=reprocessar
+        criar_caminho=not nao_criar_caminho,
+        reprocessar=not nao_reprocessar
     )
 
 
