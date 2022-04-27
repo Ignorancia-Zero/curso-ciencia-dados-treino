@@ -97,8 +97,8 @@ class _BaseETL(abc.ABC):
             self.extract()
         return self._dados_entrada
 
-    @abc.abstractmethod
     @property
+    @abc.abstractmethod
     def bases_entrada(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de entrada
@@ -107,8 +107,8 @@ class _BaseETL(abc.ABC):
         """
         raise NotImplementedError
 
-    @abc.abstractmethod
     @property
+    @abc.abstractmethod
     def bases_saida(self) -> typing.List[str]:
         """
         Lista o nome dos arquivos de saída

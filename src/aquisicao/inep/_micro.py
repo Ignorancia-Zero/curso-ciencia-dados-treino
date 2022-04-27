@@ -54,6 +54,7 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
 
         :return: dicionário com nome do arquivo e link para a página
         """
+
         if not hasattr(self, "_inep"):
             soup = obtem_pagina(self._url)
             self._inep = {
@@ -73,7 +74,10 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
             if self._ano == "ultimo":
                 return max([int(b[:4]) for b in self.inep])
             else:
-                raise ValueError(f"Não conseguimos processar ano={self._ano}")
+                if self._ano.isnumeric():
+                    return int(self._ano)
+                else:
+                    raise ValueError(f"Não conseguimos processar ano={self._ano}")
         else:
             return self._ano
 
@@ -90,9 +94,10 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         Realiza o download das bases de dados que serão utilizadas pelo objeto
         """
-        for base, link in self._inep.items():
-            if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
-                download_dados_web(self.caminho_entrada / base, link)
+        base = f"{self.ano}.zip"
+        link = self.inep[base]
+        if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
+            download_dados_web(self.caminho_entrada / base, link)
 
     def _load(self) -> None:
         """
