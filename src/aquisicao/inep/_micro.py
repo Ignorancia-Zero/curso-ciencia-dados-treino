@@ -43,10 +43,17 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         super().__init__(entrada, saida, criar_caminho, reprocessar)
 
-        self._base = base.replace("-", "_")
         self._sub_pasta = base.replace("-", "_").replace(" ", "_")
+        self._base = base.replace("-", "_")
         self._ano = ano
         self._url = f"{self.URL}/{base}"
+
+        # substitui os valores de entrada e saída
+        self.caminho_entrada = self.caminho_entrada / f"{self._sub_pasta}"
+        self.caminho_saida = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
+        if criar_caminho:
+            self.caminho_entrada.mkdir(parents=True, exist_ok=True)
+            self.caminho_saida.mkdir(parents=True, exist_ok=True)
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -98,19 +105,16 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Realiza o download das bases de dados que serão utilizadas pelo objeto
         """
         base = f"{self.ano}.zip"
-        caminho = self.caminho_entrada / f"{self._sub_pasta}"
         link = self.inep[base]
-        if base not in os.listdir(caminho) or self.reprocessar:
-            download_dados_web(caminho / base, link)
+        if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
+            download_dados_web(self.caminho_entrada / base, link)
 
     def _load(self) -> None:
         """
         Exporta os dados transformados
         """
         for arq, df in self.dados_saida.items():
-            caminho = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
-            caminho.mkdir(parents=True, exist_ok=True)
             df.drop(columns="ANO").to_parquet(
-                caminho / f"{arq}.parquet",
+                self.caminho_saida / f"{self.ano}.parquet",
                 index=False,
             )

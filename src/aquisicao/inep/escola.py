@@ -61,7 +61,7 @@ class EscolaETL(_BaseINEPETL):
         Carrega as bases de dados que foram baixadas na memória pelo pandas
         """
         # abre o arquivo zip com o conteúdo do censo
-        with zipfile.ZipFile(self.caminho_entrada / f"{self._sub_pasta}/{self.ano}.zip") as z:
+        with zipfile.ZipFile(self.caminho_entrada / f"{self.ano}.zip") as z:
             # lista os conteúdos dos arquivos zip que contém o nome tabela
             arq = [f for f in z.namelist() if "escolas." in f.lower()][0]
 
