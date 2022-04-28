@@ -217,8 +217,7 @@ class _BaseETL(abc.ABC):
         Exporta os dados transformados
         """
         self._logger.info(f"CARREGANDO DADOS DO OBJETO > {self}")
-        saidas = set(os.listdir(self.caminho_saida))
-        if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
+        if not self.tem_dados_saida() or self.reprocessar:
             self._load()
 
     def pipeline(self) -> None:
