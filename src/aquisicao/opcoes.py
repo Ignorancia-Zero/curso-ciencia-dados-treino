@@ -1,10 +1,16 @@
 from enum import Enum
 
+from src.aquisicao.inep.escola import EscolaETL
+
 
 class EnumETL(Enum):
-    censo_escolar = "CENSO_ESCOLAR"
+    escola = "ESCOLA"
+
+
+# lista os objetos ETL que fazem parte dos micro-dados do inep
+ETL_INEP_MICRO = [EnumETL.escola]
 
 
 # chave = Enum
 # valor = Classe de objeto ETL
-ETL_DICT = {}
+ETL_DICT = {EnumETL.escola: EscolaETL}

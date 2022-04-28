@@ -14,7 +14,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
     deve funcionar para baixar dados do INEP
     """
 
-    URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"  # URL base para todos os micro-dados do INEP
+    # URL base para todos os micro-dados do INEP
+    # URL: str = "https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/microdados/"
+    URL: str = "https://iz-ccdd.herokuapp.com/"
 
     _base: str  # lista de bases que devem ser baixadas
     _url: str  # URL completa a lista de micro-dados
@@ -41,9 +43,17 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         super().__init__(entrada, saida, criar_caminho, reprocessar)
 
+        self._sub_pasta = base.replace("-", "_").replace(" ", "_")
         self._base = base.replace("-", "_")
         self._ano = ano
         self._url = f"{self.URL}/{base}"
+
+        # substitui os valores de entrada e saída
+        self.caminho_entrada = self.caminho_entrada / f"{self._sub_pasta}"
+        self.caminho_saida = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
+        if criar_caminho:
+            self.caminho_entrada.mkdir(parents=True, exist_ok=True)
+            self.caminho_saida.mkdir(parents=True, exist_ok=True)
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -54,10 +64,11 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
 
         :return: dicionário com nome do arquivo e link para a página
         """
+
         if not hasattr(self, "_inep"):
             soup = obtem_pagina(self._url)
             self._inep = {
-                tag["href"].split("_")[-1]: tag["href"]
+                tag.text[::-1][:4][::-1] + ".zip": tag["href"]
                 for tag in soup.find_all("a", {"class": "external-link"})
             }
         return self._inep
@@ -73,7 +84,10 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
             if self._ano == "ultimo":
                 return max([int(b[:4]) for b in self.inep])
             else:
-                raise ValueError(f"Não conseguimos processar ano={self._ano}")
+                if self._ano.isnumeric():
+                    return int(self._ano)
+                else:
+                    raise ValueError(f"Não conseguimos processar ano={self._ano}")
         else:
             return self._ano
 
@@ -90,16 +104,17 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         Realiza o download das bases de dados que serão utilizadas pelo objeto
         """
-        for base, link in self._inep.items():
-            if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
-                download_dados_web(self.caminho_entrada / base, link)
+        base = f"{self.ano}.zip"
+        link = self.inep[base]
+        if base not in os.listdir(self.caminho_entrada) or self.reprocessar:
+            download_dados_web(self.caminho_entrada / base, link)
 
     def _load(self) -> None:
         """
         Exporta os dados transformados
         """
         for arq, df in self.dados_saida.items():
-            df.drop(columns="ANO")
-            df.to_parquet(
-                self.caminho_saida / f"ANO={self.ano}/{arq}.parquet", index=False
+            df.drop(columns="ANO").to_parquet(
+                self.caminho_saida / f"{self.ano}.parquet",
+                index=False,
             )
