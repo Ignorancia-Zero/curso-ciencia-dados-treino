@@ -50,10 +50,8 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
 
         # substitui os valores de entrada e saída
         self.caminho_entrada = self.caminho_entrada / f"{self._sub_pasta}"
-        self.caminho_saida = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
         if criar_caminho:
             self.caminho_entrada.mkdir(parents=True, exist_ok=True)
-            self.caminho_saida.mkdir(parents=True, exist_ok=True)
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -115,6 +113,6 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         """
         for arq, df in self.dados_saida.items():
             df.drop(columns="ANO").to_parquet(
-                self.caminho_saida / f"{self.ano}.parquet",
+                self.caminho_saida / f"{arq}/{self.ano}.parquet",
                 index=False,
             )
