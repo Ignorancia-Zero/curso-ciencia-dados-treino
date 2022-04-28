@@ -8,7 +8,6 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 import rarfile
-from tqdm import tqdm
 
 from src.aquisicao.inep._micro import _BaseINEPETL
 from src.utils.info import carrega_excel
@@ -43,7 +42,8 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         """
         Instância o objeto de ETL Censo Escolar
 
-        :param ds: instância de objeto data store
+        :param entrada: string com caminho para pasta de entrada
+        :param saida: string com caminho para pasta de saída
         :param tabela: Tabela do censo escolar a ser processada
         :param ano: ano da pesquisa a ser processado (pode ser um inteiro ou 'ultimo')
         :param criar_caminho: flag indicando se devemos criar os caminhos
@@ -98,7 +98,9 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         )
 
     @staticmethod
-    def carrega_arquivo(arq: str, buffer: typing.Union[str, Path, typing.IO[bytes], BytesIO], **kwargs) -> pd.DataFrame:
+    def carrega_arquivo(
+        arq: str, buffer: typing.Union[str, Path, typing.IO[bytes], BytesIO], **kwargs
+    ) -> pd.DataFrame:
         """
         Le os dados de um arquivo contido em um buffer
 
@@ -120,50 +122,59 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         elif ".rar" in arq.lower():
             with rarfile.RarFile(buffer) as z:
                 arq = z.namelist()[0]
-                return pd.read_csv(z.open(arq), encoding="latin-1", sep="|")
+                return pd.read_csv(z.open(arq), **kwargs)
 
     def _extract(self) -> None:
         """
         Extraí os dados do objeto
         """
         # para cada arquivo do censo
-        for censo in tqdm(self._inep):
-            conf = dict(
-                como_df=True,
-                padrao_comp=(
-                    f"({self._tabela.lower()}|{self._tabela.upper()}|{self._tabela.lower().title()})"
-                    f"({self._regioes})?"
-                    f"[.](csv|CSV|rar|RAR|zip|ZIP)"
-                ),
-                sep="|",
-                encoding="latin-1",
+        with zipfile.ZipFile(self.caminho_entrada / f"{self.ano}.zip") as z:
+            # gera o padrão de pesquisa
+            padrao_comp = (
+                f"({self._tabela.lower()}|{self._tabela.upper()}|{self._tabela.lower().title()})"
+                f"({self._regioes})?"
+                f"[.](csv|CSV|rar|RAR|zip|ZIP)"
             )
+            conf = dict(encoding="latin-1", sep="|")
 
-            # carrega uma versão dummy dos dados e compara contra os valores reais
-            dummy = self.carrega_arquivo(censo, nrows=10, **conf)
-            if isinstance(dummy, dict):
-                dummy = pd.concat(list(dummy.values()))
-            total_cols = set(dummy.columns)
-            if len(total_cols - set(self._dtype)) > 0:
-                self._logger.warning(
-                    f"As colunas {total_cols - set(self._dtype)} foram adicionadas ao dataset, avalie se não é necessário adiciona-las ao arquivo de configuração"
-                )
+            # lista os conteúdos dos arquivos zip que contém o padrão
+            arqs = [
+                f for f in z.namelist() if re.search(padrao_comp, f.lower()) is not None
+            ]
 
+            # para cada arquivo a ser carregado
+            for arq in arqs:
+                # carrega uma versão dummy dos dados e compara contra os valores reais
+                dummy = self.carrega_arquivo(arq, z.open(arq), nrows=10, **conf)
+                total_cols = set(dummy.columns)
+                if len(total_cols - set(self._dtype)) > 0:
+                    self._logger.warning(
+                        f"As colunas {total_cols - set(self._dtype)} foram adicionadas ao dataset, "
+                        f"avalie se não é necessário adiciona-las ao arquivo de configuração"
+                    )
+
+            # adiciona as configurações de carregamento
             conf["usecols"] = self._carrega_cols
             conf["dtype"] = self._dtype
-            censo.obtem_dados(**conf)
 
-            if censo._data is not None:
-                if isinstance(censo.data, dict):
-                    censo.data = pd.concat(list(censo.data.values()))
-                censo.data.rename(columns=self._rename, inplace=True)
-                self._dados_entrada.append(censo)
+            # carrega os dados
+            data = list()
+            for arq in arqs:
+                df = self.carrega_arquivo(arq, z.open(arq), **conf)
+                if df is not None:
+                    df.rename(columns=self._rename, inplace=True)
+                    data.append(df)
 
-        if len(self._dados_entrada) == 0:
-            raise ValueError(
-                f"As configurações do objeto não geraram qualquer base de dados"
-                f"de entrada -> {self._base} / {self._tabela} / {self._ano}"
-            )
+            # verifica se algum dado foi carregado
+            if len(data) == 0:
+                raise ValueError(
+                    f"As configurações do objeto não geraram qualquer base de dados"
+                    f"de entrada -> {self._base} / {self._tabela} / {self._ano}"
+                )
+
+            # concatena as bases carregadas
+            self._dados_entrada[str(self.ano)] = pd.concat(data)
 
     @staticmethod
     def obtem_operacao(
@@ -219,7 +230,7 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
             # se a coluna não existir na base e se nós temos colunas de origem
             if (coluna not in base.columns) and len(colunas_origem) > 0:
                 # aplica a função de geração de colunas
-                func = EscolaETL.obtem_operacao(operacao)
+                func = _BaseCensoEscolarETL.obtem_operacao(operacao)
                 base[coluna] = func(base, colunas_origem).astype("int")
 
     def gera_dt_nascimento(self, base: pd.DataFrame) -> None:
@@ -342,9 +353,7 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         base_id = base.reindex(columns=cols)
 
         self._logger.debug(base, base.shape)
-        base.drop(
-            columns=self._configs["COLS_DEPARA"], errors="ignore", inplace=True
-        )
+        base.drop(columns=self._configs["COLS_DEPARA"], errors="ignore", inplace=True)
         base.drop_duplicates(inplace=True)
 
         self._logger.debug(base, base.shape)
@@ -356,7 +365,7 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         base: pd.DataFrame,
         fill: typing.Dict[str, typing.Any],
         schema: typing.Dict[str, str],
-    ) -> None:
+    ) -> pd.DataFrame:
         """
         Modifica o schema de uma base para bater com as configurações
 
@@ -387,6 +396,8 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
             else:
                 base[c] = base[c].astype(dtype)
 
+        return base
+
     def _transform(self) -> None:
         """
         Transforma os dados e os adequa para os formatos de saída de interesse
@@ -412,15 +423,13 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
         base_id = self.remove_duplicatas(base)
 
         self._logger.info("Realizando ajustes finais na base")
-        self.ajusta_schema(
+        self._dados_saida[self.bases_saida[0]] = self.ajusta_schema(
             base=base,
             fill=self._configs["PREENCHER_NULOS"],
             schema=self._configs["DADOS_SCHEMA"],
         )
-        self._dados_saida[str(self.ano)] = base
-
-        if base_id.shape[0] > 1:
-            self.ajusta_schema(
+        if base_id:
+            self._dados_saida[self.bases_saida[1]] = self.ajusta_schema(
                 base=base_id,
                 fill=self._configs["PREENCHER_NULOS"],
                 schema=self._configs["DEPARA_SCHEMA"],
