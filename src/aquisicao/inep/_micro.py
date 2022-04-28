@@ -63,11 +63,11 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         saidas = set(os.listdir(self.caminho_saida))
         if saidas.issuperset(set(self.bases_saida)):
             for b in self.bases_saida:
-                sub = os.listdir(self.caminho_entrada / b)
+                sub = os.listdir(self.caminho_saida / b)
                 if f"ANO={self.ano}" not in sub:
                     return False
                 elif f"{self.ano}.parquet" not in os.listdir(
-                    self.caminho_entrada / f"{b}/ANO={self.ano}"
+                    self.caminho_saida / f"{b}/ANO={self.ano}"
                 ):
                     return False
             return True
@@ -133,7 +133,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Exporta os dados transformados
         """
         for arq, df in self.dados_saida.items():
+            (self.caminho_saida / f"{arq}/ANO={self.ano}").mkdir(parents=True, exist_ok=True)
+
             df.drop(columns="ANO").to_parquet(
-                self.caminho_saida / f"{arq}/{self.ano}.parquet",
+                self.caminho_saida / f"{arq}/ANO={self.ano}/{self.ano}.parquet",
                 index=False,
             )
