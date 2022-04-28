@@ -53,6 +53,27 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         if criar_caminho:
             self.caminho_entrada.mkdir(parents=True, exist_ok=True)
 
+    def tem_dados_saida(self) -> bool:
+        """
+        Verifica se o objeto ETL possuí todos os dados que fazem
+        parte da sua saída
+
+        :return: True se os dados estiver disponíveis
+        """
+        saidas = set(os.listdir(self.caminho_saida))
+        if saidas.issuperset(set(self.bases_saida)):
+            for b in self.bases_saida:
+                sub = os.listdir(self.caminho_entrada / b)
+                if f"ANO={self.ano}" not in sub:
+                    return False
+                elif f"{self.ano}.parquet" not in os.listdir(
+                    self.caminho_entrada / f"{b}/ANO={self.ano}"
+                ):
+                    return False
+            return True
+        else:
+            return False
+
     @property
     def inep(self) -> typing.Dict[str, str]:
         """
