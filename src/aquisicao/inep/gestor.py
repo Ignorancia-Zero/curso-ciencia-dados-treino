@@ -1,7 +1,7 @@
 import typing
+from pathlib import Path
 
 from src.aquisicao.inep._censo import _BaseCensoEscolarETL
-from pathlib import Path
 
 
 class GestorETL(_BaseCensoEscolarETL):

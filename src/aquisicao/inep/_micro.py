@@ -133,7 +133,9 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Exporta os dados transformados
         """
         for arq, df in self.dados_saida.items():
-            (self.caminho_saida / f"{arq}/ANO={self.ano}").mkdir(parents=True, exist_ok=True)
+            (self.caminho_saida / f"{arq}/ANO={self.ano}").mkdir(
+                parents=True, exist_ok=True
+            )
 
             df.drop(columns="ANO").to_parquet(
                 self.caminho_saida / f"{arq}/ANO={self.ano}/{self.ano}.parquet",

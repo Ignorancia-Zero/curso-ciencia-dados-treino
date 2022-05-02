@@ -1,10 +1,10 @@
+import os
 import typing
+from pathlib import Path
 
 import pandas as pd
 
 from src.aquisicao.inep._censo import _BaseCensoEscolarETL
-from pathlib import Path
-import os
 
 
 class _MatriculaRegiaoETL(_BaseCensoEscolarETL):
@@ -44,7 +44,7 @@ class _MatriculaRegiaoETL(_BaseCensoEscolarETL):
             ano=ano,
             criar_caminho=criar_caminho,
             reprocessar=reprocessar,
-            regioes=[regiao]
+            regioes=[regiao],
         )
         self.reg = regiao.upper()
 
