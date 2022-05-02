@@ -93,7 +93,7 @@ class _BaseETL(abc.ABC):
 
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
-        if self._dados_entrada is None:
+        if len(self._dados_entrada) < len(self.bases_entrada):
             self.extract()
         return self._dados_entrada
 
@@ -124,8 +124,10 @@ class _BaseETL(abc.ABC):
 
         :return: True se os dados estiver disponíveis
         """
-        dados = set(os.listdir(self.caminho_entrada))
-        return dados.issuperset(set(self.bases_entrada))
+        tem_dados = True
+        for b in self.bases_entrada:
+            tem_dados = tem_dados and os.path.exists(self.caminho_entrada / b)
+        return tem_dados
 
     def tem_dados_saida(self) -> bool:
         """
@@ -134,8 +136,21 @@ class _BaseETL(abc.ABC):
 
         :return: True se os dados estiver disponíveis
         """
-        saidas = set(os.listdir(self.caminho_saida))
-        return saidas.issuperset(set(self.bases_saida))
+        tem_dados = True
+        for b in self.bases_saida:
+            tem_dados = tem_dados and os.path.exists(self.caminho_saida / b)
+        return tem_dados
+
+    def carrega_saidas(self) -> None:
+        """
+        Carrega os dados de saída no dicionário de dados de saída
+        caso as mesmas existam
+        """
+        if self.tem_dados_saida():
+            self._dados_saida = {
+                arq: pd.read_parquet(self.caminho_saida / arq)
+                for arq in self.bases_saida
+            }
 
     @property
     def precisa_reprocessar(self) -> bool:
@@ -157,7 +172,7 @@ class _BaseETL(abc.ABC):
 
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
-        if self._dados_saida is None:
+        if len(self._dados_saida) < len(self.bases_saida):
             self.transform()
         return self._dados_saida
 
@@ -207,10 +222,7 @@ class _BaseETL(abc.ABC):
         if not self.tem_dados_saida() or self.reprocessar:
             self._transform()
         else:
-            self._dados_saida = {
-                arq: pd.read_parquet(self.caminho_saida / arq)
-                for arq in self.bases_saida
-            }
+            self.carrega_saidas()
 
     def load(self) -> None:
         """
