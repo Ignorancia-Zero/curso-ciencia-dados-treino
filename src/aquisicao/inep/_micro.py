@@ -50,10 +50,29 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
 
         # substitui os valores de entrada e saída
         self.caminho_entrada = self.caminho_entrada / f"{self._sub_pasta}"
-        self.caminho_saida = self.caminho_saida / f"{self}.parquet/ANO={self.ano}"
         if criar_caminho:
             self.caminho_entrada.mkdir(parents=True, exist_ok=True)
-            self.caminho_saida.mkdir(parents=True, exist_ok=True)
+
+    def tem_dados_saida(self) -> bool:
+        """
+        Verifica se o objeto ETL possuí todos os dados que fazem
+        parte da sua saída
+
+        :return: True se os dados estiver disponíveis
+        """
+        saidas = set(os.listdir(self.caminho_saida))
+        if saidas.issuperset(set(self.bases_saida)):
+            for b in self.bases_saida:
+                sub = os.listdir(self.caminho_saida / b)
+                if f"ANO={self.ano}" not in sub:
+                    return False
+                elif f"{self.ano}.parquet" not in os.listdir(
+                    self.caminho_saida / f"{b}/ANO={self.ano}"
+                ):
+                    return False
+            return True
+        else:
+            return False
 
     @property
     def inep(self) -> typing.Dict[str, str]:
@@ -114,7 +133,11 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
         Exporta os dados transformados
         """
         for arq, df in self.dados_saida.items():
+            (self.caminho_saida / f"{arq}/ANO={self.ano}").mkdir(
+                parents=True, exist_ok=True
+            )
+
             df.drop(columns="ANO").to_parquet(
-                self.caminho_saida / f"{self.ano}.parquet",
+                self.caminho_saida / f"{arq}/ANO={self.ano}/{self.ano}.parquet",
                 index=False,
             )

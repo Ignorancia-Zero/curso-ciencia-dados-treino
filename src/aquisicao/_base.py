@@ -117,6 +117,26 @@ class _BaseETL(abc.ABC):
         """
         raise NotImplementedError
 
+    def tem_dados_entrada(self) -> bool:
+        """
+        Verifica se o objeto ETL possuí todos os dados que fazem
+        parte da sua entrada
+
+        :return: True se os dados estiver disponíveis
+        """
+        dados = set(os.listdir(self.caminho_entrada))
+        return dados.issuperset(set(self.bases_entrada))
+
+    def tem_dados_saida(self) -> bool:
+        """
+        Verifica se o objeto ETL possuí todos os dados que fazem
+        parte da sua saída
+
+        :return: True se os dados estiver disponíveis
+        """
+        saidas = set(os.listdir(self.caminho_saida))
+        return saidas.issuperset(set(self.bases_saida))
+
     @property
     def precisa_reprocessar(self) -> bool:
         """
@@ -124,11 +144,9 @@ class _BaseETL(abc.ABC):
 
         :return: True se algum dado está faltando
         """
-        dados = set(os.listdir(self.caminho_entrada))
-        saidas = set(os.listdir(self.caminho_saida))
         return (
-            not dados.issuperset(set(self.bases_entrada))
-            or not saidas.issuperset(set(self.bases_saida))
+            not self.tem_dados_entrada()
+            or not self.tem_dados_saida()
             or self.reprocessar
         )
 
@@ -177,8 +195,7 @@ class _BaseETL(abc.ABC):
         Extraí os dados do objeto
         """
         self._logger.info(f"EXTRAINDO DADOS DO OBJETO > {self}")
-        dados = set(os.listdir(self.caminho_entrada))
-        if not dados.issuperset(set(self.bases_entrada)) or self.reprocessar:
+        if not self.tem_dados_entrada() or self.reprocessar:
             self._download()
         self._extract()
 
@@ -187,8 +204,7 @@ class _BaseETL(abc.ABC):
         Extraí os dados do objeto
         """
         self._logger.info(f"TRANSFORMANDO DADOS DO OBJETO > {self}")
-        saidas = set(os.listdir(self.caminho_saida))
-        if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
+        if not self.tem_dados_saida() or self.reprocessar:
             self._transform()
         else:
             self._dados_saida = {
@@ -201,8 +217,7 @@ class _BaseETL(abc.ABC):
         Exporta os dados transformados
         """
         self._logger.info(f"CARREGANDO DADOS DO OBJETO > {self}")
-        saidas = set(os.listdir(self.caminho_saida))
-        if not saidas.issuperset(set(self.bases_saida)) or self.reprocessar:
+        if not self.tem_dados_saida() or self.reprocessar:
             self._load()
 
     def pipeline(self) -> None:
