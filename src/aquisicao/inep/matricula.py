@@ -52,6 +52,19 @@ class _MatriculaRegiaoETL(_BaseCensoEscolarETL):
     def bases_saida(self) -> typing.List[str]:
         return ["aluno.parquet", "matricula.parquet"]
 
+    def carrega_saidas(self) -> None:
+        """
+        Carrega os dados de saída no dicionário de dados de saída
+        caso as mesmas existam
+        """
+        if self.tem_dados_saida():
+            self._dados_saida = {
+                arq: pd.read_parquet(
+                    self.caminho_saida / f"{arq}/ANO={self.ano}/REGIAO={self.reg}"
+                ).assign(ANO=self.ano, REGIAO=self.reg)
+                for arq in self.bases_saida
+            }
+
     def tem_dados_saida(self) -> bool:
         """
         Verifica se o objeto ETL possuí todos os dados que fazem

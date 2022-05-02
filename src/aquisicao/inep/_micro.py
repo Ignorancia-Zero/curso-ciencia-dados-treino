@@ -3,6 +3,8 @@ import os
 import typing
 from pathlib import Path
 
+import pandas as pd
+
 from src.aquisicao._base import _BaseETL
 from src.utils.web import download_dados_web
 from src.utils.web import obtem_pagina
@@ -73,6 +75,19 @@ class _BaseINEPETL(_BaseETL, abc.ABC):
             return True
         else:
             return False
+
+    def carrega_saidas(self) -> None:
+        """
+        Carrega os dados de saída no dicionário de dados de saída
+        caso as mesmas existam
+        """
+        if self.tem_dados_saida():
+            self._dados_saida = {
+                arq: pd.read_parquet(
+                    self.caminho_saida / f"{arq}/ANO={self.ano}"
+                ).assign(ANO=self.ano)
+                for arq in self.bases_saida
+            }
 
     @property
     def inep(self) -> typing.Dict[str, str]:

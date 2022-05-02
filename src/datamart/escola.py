@@ -313,6 +313,8 @@ def processa_gestor(
 
     # obtém a área do curso do gestor
     df_cr = carrega_excel("censo_escolar_cursos.xlsx")
+    df_cr["TP_GRAU_ACADEMICO"] = df_cr["TP_GRAU_ACADEMICO"].astype("category")
+    df_cr["TP_AREA_CURSO"] = df_cr["TP_AREA_CURSO"].astype("category")
     gestor = gestor.merge(
         df_cr, left_on=["CO_CURSO_1"], right_on=["CO_CURSO"], how="left"
     ).drop(columns=["CO_CURSO"])
@@ -325,6 +327,7 @@ def processa_gestor(
         ("TP_ESCOLARIDADE", "GESTOR_ESC", gestor),
         ("TP_ENSINO_MEDIO", "GESTOR_EM", gestor),
         ("TP_AREA_CURSO", "GESTOR_FORMACAO", gestor),
+        ("TP_GRAU_ACADEMICO", "GESTOR_GRAU", gestor),
         ("TP_CARGO_GESTOR", "GESTOR_CARGO", depara),
         ("TP_TIPO_ACESSO_CARGO", "GESTOR_ACESSO", depara),
         ("TP_TIPO_CONTRATACAO", "GESTOR_CONT", depara),

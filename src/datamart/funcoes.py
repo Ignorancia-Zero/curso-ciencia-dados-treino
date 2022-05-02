@@ -75,7 +75,6 @@ def processa_coluna_tp(
     """
     # realiza o pivô da coluna TP
     sub = df.reindex(columns=[id_col, tp_col, val_col])
-    print(tp_col, df[tp_col].dtype)
     cat = pd.CategoricalDtype(
         list(df[tp_col].dtype.categories) + ["NULO"], ordered=df[tp_col].dtype.ordered
     )
