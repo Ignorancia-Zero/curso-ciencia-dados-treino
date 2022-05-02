@@ -428,7 +428,7 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
             fill=self._configs["PREENCHER_NULOS"],
             schema=self._configs["DADOS_SCHEMA"],
         )
-        if base_id:
+        if base_id is not None:
             self._dados_saida[self.bases_saida[1]] = self.ajusta_schema(
                 base=base_id,
                 fill=self._configs["PREENCHER_NULOS"],
