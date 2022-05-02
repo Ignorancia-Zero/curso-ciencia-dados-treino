@@ -3,9 +3,9 @@ from enum import Enum
 from src.aquisicao.inep.docente import DocenteETL
 from src.aquisicao.inep.escola import EscolaETL
 from src.aquisicao.inep.gestor import GestorETL
+from src.aquisicao.inep.ideb import IDEBETL
 from src.aquisicao.inep.matricula import MatriculaETL
 from src.aquisicao.inep.turma import TurmaETL
-from src.aquisicao.inep.ideb import IDEBETL
 
 
 class EnumETL(Enum):

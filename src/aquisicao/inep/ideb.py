@@ -97,7 +97,9 @@ class IDEBETL(_BaseETL):
                 # carrega o arquivo de excel
                 padrao_comp = f"({os.path.splitext(base)[0]})[.](xlsx|XLSX|xls|XLS)"
                 arq = [
-                    f for f in z.namelist() if re.search(padrao_comp, f.lower()) is not None
+                    f
+                    for f in z.namelist()
+                    if re.search(padrao_comp, f.lower()) is not None
                 ][0]
                 self._dados_entrada[base] = pd.read_excel(z.open(arq), skiprows=9)
 
