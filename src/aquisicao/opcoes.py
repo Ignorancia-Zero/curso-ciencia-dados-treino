@@ -5,6 +5,7 @@ from src.aquisicao.inep.escola import EscolaETL
 from src.aquisicao.inep.gestor import GestorETL
 from src.aquisicao.inep.matricula import MatriculaETL
 from src.aquisicao.inep.turma import TurmaETL
+from src.aquisicao.inep.ideb import IDEBETL
 
 
 class EnumETL(Enum):
@@ -13,6 +14,7 @@ class EnumETL(Enum):
     turma = "TURMA"
     docente = "DOCENTE"
     matricula = "MATRICULA"
+    ideb = "IDEB"
 
 
 # lista os objetos ETL que fazem parte dos micro-dados do inep
@@ -33,4 +35,5 @@ ETL_DICT = {
     EnumETL.turma: TurmaETL,
     EnumETL.docente: DocenteETL,
     EnumETL.matricula: MatriculaETL,
+    EnumETL.ideb: IDEBETL,
 }
