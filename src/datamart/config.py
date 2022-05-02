@@ -2,11 +2,11 @@ from enum import Enum
 
 
 class DMGran(Enum):
-    ESCOLA = "escola"
-    DOCENTE = "docente"
-    TURMA = "turma"
-    ALUNO = "aluno"
-    GESTOR = "gestor"
-    MATRICULA = "matricula"
-    MUNICIPIO = "municipio"
-    ESTADO = "estado"
+    ESCOLA = "ESCOLA"
+    DOCENTE = "DOCENTE"
+    TURMA = "TURMA"
+    ALUNO = "ALUNO"
+    GESTOR = "GESTOR"
+    MATRICULA = "MATRICULA"
+    MUNICIPIO = "MUNICIPIO"
+    ESTADO = "ESTADO"

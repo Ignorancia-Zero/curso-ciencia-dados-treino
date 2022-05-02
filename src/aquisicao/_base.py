@@ -93,7 +93,7 @@ class _BaseETL(abc.ABC):
 
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
-        if self._dados_entrada is None:
+        if len(self._dados_entrada) < len(self.bases_entrada):
             self.extract()
         return self._dados_entrada
 
@@ -157,7 +157,7 @@ class _BaseETL(abc.ABC):
 
         :return: dicionário com o nome do arquivo e um dataframe com os dados
         """
-        if self._dados_saida is None:
+        if len(self._dados_saida) < len(self.bases_saida):
             self.transform()
         return self._dados_saida
 
