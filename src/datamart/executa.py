@@ -7,14 +7,17 @@ from src.utils.logs import log_erros
 
 
 @log_erros
-def executa_datamart(granularidade: str, ano: str, aquisicao: Path, saida: Path) -> None:
+def executa_datamart(
+    granularidade: str, ano: str, aquis_entrada: Path, aquis_saida: Path, saida: Path
+) -> None:
     """
     Constrói um datamart a um determinado nível de granularidade para um
     dado ano de dados
 
     :param granularidade: nível do datamart a ser gerado
     :param ano: ano da pesquisa a ser processado
-    :param aquisicao: caminho para pasta de dados processados na aquisição
+    :param aquis_entrada: caminho para entrada de aquisição
+    :param aquis_saida: caminho para saída de aquisição
     :param saida: caminho para pasta de saída
     """
     # obtém a granularidade
@@ -26,7 +29,7 @@ def executa_datamart(granularidade: str, ano: str, aquisicao: Path, saida: Path)
     ano_int = int(ano)
 
     if gran == DMGran.ESCOLA:
-        controi_datamart_escola(ano_int, aquisicao, saida)
+        controi_datamart_escola(ano_int, aquis_entrada, aquis_saida, saida)
     else:
         raise NotImplementedError(
             f"Nós ainda temos que desenvolver o datamart para {granularidade}"
