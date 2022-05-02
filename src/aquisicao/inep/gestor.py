@@ -19,7 +19,7 @@ class GestorETL(_BaseCensoEscolarETL):
         reprocessar: bool = False,
     ) -> None:
         """
-        Instância o objeto de ETL de dados de Escola
+        Instância o objeto de ETL de dados de Gestor
 
         :param entrada: string com caminho para pasta de entrada
         :param saida: string com caminho para pasta de saída
