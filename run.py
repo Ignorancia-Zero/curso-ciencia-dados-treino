@@ -8,6 +8,7 @@ from src.aquisicao.executa import executa_micro_inep
 from src.aquisicao.opcoes import EnumETL
 from src.aquisicao.opcoes import ETL_INEP_MICRO
 from src.utils.logs import configura_logs
+from src.datamart.executa import executa_datamart
 
 
 @click.group()
@@ -132,6 +133,52 @@ def processa_micro_inep(
         criar_caminho=not nao_criar_caminho,
         reprocessar=not nao_reprocessar
     )
+
+
+@cli.group()
+def datamart():
+    """
+    Grupo de comandos que executam as funções de datamart
+    """
+    pass
+
+
+@datamart.command()
+@click.option(
+    "--granularidade",
+    type=click.Choice([s.value for s in DMGran]),
+    help="Nome do ETL a ser executado",
+)
+@click.option(
+    "--ano",
+    type=click.STRING,
+    default="ultimo",
+    help="Ano dos dados a serem processados (pode ser int ou 'ultimo')",
+)
+@click.option(
+    "--aquisicao",
+    default=conf_geral.PASTA_SAIDA_AQUISICAO,
+    type=click.Path(file_okay=False, resolve_path=True, path_type=Path),
+    help="Pasta para extração dos dados de aquisição",
+)
+@click.option(
+    "--saida",
+    default=conf_geral.PASTA_SAIDA_DATAMART,
+    type=click.Path(file_okay=False, resolve_path=True, path_type=Path),
+    help="Pasta para carregamento dos dados de aquisição",
+)
+def processa_datamart(granularidade: str, ano: str, aquisicao: Path, saida: Path) -> None:
+    """
+    Constrói um datamart a um determinado nível de granularidade para um
+    dado ano de dados
+
+    :param granularidade: nível do datamart a ser gerado
+    :param ano: Ano dos dados a serem processados (pode ser int ou 'ultimo')
+    :param aquisicao: caminho para pasta de dados processados na aquisição
+    :param saida: caminho para pasta de saída
+    """
+    configura_logs()
+    executa_datamart(granularidade, ano, aquisicao, saida)
 
 
 if __name__ == "__main__":
