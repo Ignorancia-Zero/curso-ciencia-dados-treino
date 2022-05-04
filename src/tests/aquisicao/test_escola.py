@@ -1,10 +1,10 @@
 import os
 import re
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import pytest
-from pathlib import Path
 
 from src.aquisicao.inep.escola import EscolaETL
 
