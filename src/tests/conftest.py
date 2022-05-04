@@ -1,4 +1,6 @@
+import logging
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -12,4 +14,7 @@ except ModuleNotFoundError:
 
 @pytest.fixture(scope="session")
 def test_path():
-    return Path(os.path.dirname(__file__))
+    caminho = Path(os.path.dirname(__file__))
+    yield caminho
+    logging.shutdown()
+    shutil.rmtree(caminho / "logs")

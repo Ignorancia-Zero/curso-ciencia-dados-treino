@@ -1,6 +1,7 @@
-from src.utils.info import carrega_yaml
-from src.utils.info import carrega_excel
 import pandas as pd
+
+from src.utils.info import carrega_excel
+from src.utils.info import carrega_yaml
 
 
 def test_carrega_yaml():
@@ -10,7 +11,7 @@ def test_carrega_yaml():
     assert "DADOS_SCHEMA" in info
 
 
-def test_carrega_excel():
+def test_log_erros():
     info = carrega_excel("censo_escolar_etapa_ensino.xlsx")
 
     assert isinstance(info, pd.DataFrame)

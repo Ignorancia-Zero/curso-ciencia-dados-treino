@@ -9,12 +9,15 @@ from pathlib import Path
 def configura_logs(
     formato: str = "{asctime} {levelname} ({module}:{lineno:d}) {message}",
     arquivo: bool = True,
+    pasta_logs: typing.Union[str, Path, None] = None
 ) -> str:
     """
     Inicia os objetos Logger e realiza as configurações de formatação,
     nível e saída do log
+
     :param formato: formatação dos logs
     :param arquivo: flag se devemos criar um stream para um arquivo
+    :param pasta_logs: caminho para a pasta de logs
     :return: data e horário da execução do programa
     """
     # obtém o logger raíz
@@ -39,7 +42,10 @@ def configura_logs(
     # configura o objeto para saída para um arquivo
     if arquivo:
         # cria uma pasta com a saída dos logs
-        log_dir = Path(__file__).parent.parent.parent / "logs"
+        if pasta_logs is None:
+            log_dir = Path(__file__).parent.parent.parent / "logs"
+        else:
+            log_dir = Path(pasta_logs)
         log_dir.mkdir(parents=True, exist_ok=True)
 
         # configura o objeto de saída para o arquivo
@@ -61,9 +67,9 @@ def configura_logs(
 
 def log_erros(func: typing.Callable) -> typing.Callable:
     """
-    Cria um decorador para ser colocado nas funções principais
-    do código de forma que permita transferir o traceback caso
-    ocorra algum erro ao log
+    Cria um decorador para ser colocado nas funções principais do código de forma
+    que permita transferir o traceback caso ocorra algum erro ao log
+
     :param func: função a ser decorada
     :return: função que irá exportar o traceback para o log
     """
