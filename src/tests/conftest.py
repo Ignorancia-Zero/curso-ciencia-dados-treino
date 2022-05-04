@@ -14,7 +14,10 @@ except ModuleNotFoundError:
 
 @pytest.fixture(scope="session")
 def test_path():
-    caminho = Path(os.path.dirname(__file__))
+    caminho = Path(os.path.dirname(__file__)) / "data"
+    caminho.mkdir(parents=True, exist_ok=True)
+
     yield caminho
+
     logging.shutdown()
-    shutil.rmtree(caminho / "logs")
+    shutil.rmtree(caminho)
