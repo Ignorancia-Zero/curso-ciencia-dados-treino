@@ -21,3 +21,8 @@ def test_path():
 
     logging.shutdown()
     shutil.rmtree(caminho)
+
+
+@pytest.fixture(scope="session")
+def dados_path():
+    return Path(os.path.dirname(__file__)) / "dados"
