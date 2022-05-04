@@ -31,5 +31,5 @@ def dados_path() -> Path:
 
 @pytest.fixture(scope="session")
 def ano(dados_path: Path) -> int:
-    anos = [int(f[:4]) for f in os.listdir(dados_path / "externo/censo_escolar")]
+    anos = [int(f[:4]) for f in os.listdir(dados_path / "externo/censo_escolar") if f >= "2019.zip"]
     return random.choice(anos)
