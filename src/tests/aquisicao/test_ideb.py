@@ -101,11 +101,15 @@ def test_formata_resultados(ideb_etl: IDEBETL, data: dict) -> None:
 
 @pytest.mark.run(order=6)
 def test_concatena_saidas(ideb_etl, data) -> None:
-    df2 = ideb_etl.seleciona_dados(ideb_etl.dados_entrada["divulgacao_anos_iniciais_escolas_2019.zip"])
+    df2 = ideb_etl.seleciona_dados(
+        ideb_etl.dados_entrada["divulgacao_anos_iniciais_escolas_2019.zip"]
+    )
     dados = ideb_etl.obtem_metricas(df2, "AI")
     df2 = ideb_etl.formata_resultados(df2, dados)
 
-    df3 = ideb_etl.seleciona_dados(ideb_etl.dados_entrada["divulgacao_ensino_medio_escolas_2019.zip"])
+    df3 = ideb_etl.seleciona_dados(
+        ideb_etl.dados_entrada["divulgacao_ensino_medio_escolas_2019.zip"]
+    )
     dados = ideb_etl.obtem_metricas(df3, "EM")
     df3 = ideb_etl.formata_resultados(df3, dados)
 
