@@ -9,7 +9,8 @@ from tqdm import tqdm
 
 def obtem_pagina(url: str) -> bs4.BeautifulSoup:
     """
-    Lê uma página Web utilizando a biblioteca resquests
+    Lê uma página Web utilizando a biblioteca requests
+
     :param url: url para processar
     :return: objeto BeautifulSoup com resultado da página
     """
@@ -25,13 +26,15 @@ def download_dados_web(
 ) -> typing.Union[typing.IO[bytes], typing.BinaryIO]:
     """
     Realiza o download dos dados em um link da Web
+
     :param caminho: caminho para extração dos dados
     :param url: endereço do site a ser baixado
     :param block_size: bloco em bytes para processar o arquivo
     :return: objeto buffer para o arquivo
     """
     # garante que o caminho é um buffer para um arquivo local
-    if isinstance(caminho, str) or isinstance(caminho, Path):
+    fechar = isinstance(caminho, str) or isinstance(caminho, Path)
+    if fechar:
         arq: typing.Union[typing.IO[bytes], typing.BinaryIO] = open(caminho, "wb")
     else:
         arq = caminho
@@ -45,7 +48,10 @@ def download_dados_web(
     for data in response.iter_content(block_size):
         progress_bar.update(len(data))
         arq.write(data)
-    arq.close()
+
+    # fecha o buffer
+    if fechar:
+        arq.close()
 
     # retorna o buffer
     return arq
