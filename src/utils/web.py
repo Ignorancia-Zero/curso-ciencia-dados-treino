@@ -35,9 +35,9 @@ def download_dados_web(
     # garante que o caminho é um buffer para um arquivo local
     fechar = isinstance(caminho, str) or isinstance(caminho, Path)
     if fechar:
-        arq: typing.Union[typing.IO[bytes], typing.BinaryIO] = open(caminho, "wb")
+        arq = open(caminho, "wb")  # type: ignore
     else:
-        arq = caminho
+        arq = caminho  # type: ignore
 
     # gera um request para os dados
     response = requests.get(url, stream=True)
