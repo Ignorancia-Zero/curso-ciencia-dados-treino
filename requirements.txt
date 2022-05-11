@@ -12,3 +12,4 @@ PyYAML==6.0.0
 rarfile==4.0
 requests==2.26.0
 tqdm==4.62.3
+types-beautifulsoup4==4.11.1
