@@ -10,4 +10,5 @@ pyarrow==6.0.0
 PyYAML==6.0.0
 rarfile==4.0
 requests==2.26.0
+sphinx==3.5.4
 tqdm==4.62.3
