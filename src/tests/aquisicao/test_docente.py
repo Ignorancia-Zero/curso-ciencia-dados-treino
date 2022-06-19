@@ -76,7 +76,7 @@ def test_remove_duplicatas(docente_etl: DocenteETL) -> None:
     assert depara_cols == set(base_id)
     assert cols - set(docente_etl._configs["COLS_DEPARA"]) == set(base)
 
-    docente_etl.base_id = base_id
+    docente_etl.base_id = base_id  # type: ignore
 
 
 @pytest.mark.run(order=6)
@@ -97,7 +97,7 @@ def test_ajusta_schema(docente_etl: DocenteETL) -> None:
         elif not dtype.startswith("pd."):
             assert base[col].dtype == dtype
 
-    base_id = docente_etl.base_id
+    base_id = docente_etl.base_id  # type: ignore
     base_id = docente_etl.ajusta_schema(
         base=base_id,
         fill=docente_etl._configs["PREENCHER_NULOS"],

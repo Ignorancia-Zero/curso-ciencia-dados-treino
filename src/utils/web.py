@@ -44,7 +44,7 @@ def download_dados_web(
     total_size_in_bytes = int(response.headers.get("content-length", 0))
 
     # processa a base
-    progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)
+    progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)  # type: ignore
     for data in response.iter_content(block_size):
         progress_bar.update(len(data))
         arq.write(data)

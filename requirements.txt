@@ -13,4 +13,5 @@ rarfile==4.0
 requests==2.26.0
 sphinx==3.5.4
 tqdm==4.62.3
+tqdm-stubs==0.2.0
 types-beautifulsoup4==4.11.1

@@ -81,7 +81,7 @@ def test_remove_duplicatas(matricula_reg_etl: _MatriculaRegiaoETL) -> None:
     assert depara_cols == set(base_id)
     assert cols - set(matricula_reg_etl._configs["COLS_DEPARA"]) == set(base)
 
-    matricula_reg_etl.base_id = base_id
+    matricula_reg_etl.base_id = base_id  # type: ignore
 
 
 @pytest.mark.run(order=5)
@@ -102,7 +102,7 @@ def test_ajusta_schema(matricula_reg_etl: _MatriculaRegiaoETL) -> None:
         elif not dtype.startswith("pd."):
             assert base[col].dtype == dtype
 
-    base_id = matricula_reg_etl.base_id
+    base_id = matricula_reg_etl.base_id  # type: ignore
     base_id = matricula_reg_etl.ajusta_schema(
         base=base_id,
         fill=matricula_reg_etl._configs["PREENCHER_NULOS"],
