@@ -30,18 +30,20 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
       - name: Install dependencies
-        run: |
-          pip install flake8-black==0.2.1
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
+
       - name: Install tools
         run: sudo apt-get install unrar
 
       - name: Unit Test
         run: |
           pytest -v src -p no:cacheprovider --disable-pytest-warnings
-      - name: Code Style
-        run: |
-          flake8 . --select BLK --extend-exclude=dist,build --show-source --statistics
+
       - name: Type Check
         run: |
           mypy src/ --cache-dir=null
+
+      - name: Code Style
+        run: |
+          flake8 . --select BLK --extend-exclude=dist,build --show-source --statistics
+
