@@ -77,6 +77,13 @@ conda install -c conda-forge mypy==0.942
 pip install types-beautifulsoup4==4.11.1
 conda install -c conda-forge sphinx==3.5.4
 pip install tqdm-stubs
+conda install -c conda-forge pandas-stubs==1.2.0.37
+conda install -c conda-forge types-frozendict==2.0.1
+conda install -c conda-forge types-requests==2.26.0
+conda install -c conda-forge types-setuptools==57.4.2
+conda install -c conda-forge types-python-dateutil==2.8.2
+conda install -c conda-forge types-pytz==2021.3.0
+conda install -c conda-forge types-pyyaml==5.4.12
 ```
 
 ### Mac
