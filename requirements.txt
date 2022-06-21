@@ -2,6 +2,7 @@ beautifulsoup4==4.9.3
 black==21.10b0
 click==8.0.3
 flake8-black==0.2.1
+geopandas==0.10.2
 jupyter==1.0.0
 jupyter_contrib_nbextensions==0.5.1
 lxml==4.6.4
