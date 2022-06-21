@@ -123,6 +123,8 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
             with rarfile.RarFile(buffer) as z:
                 arq = z.namelist()[0]
                 return pd.read_csv(z.open(arq), **kwargs)
+        else:
+            raise ValueError(f"Não sabemos como processar o arquivo {arq}")
 
     def _extract(self) -> None:
         """
@@ -136,7 +138,7 @@ class _BaseCensoEscolarETL(_BaseINEPETL, abc.ABC):
                 f"({self._regioes})?"
                 f"[.](csv|CSV|rar|RAR|zip|ZIP)"
             )
-            conf = dict(encoding="latin-1", sep="|")
+            conf: typing.Dict[str, typing.Any] = dict(encoding="latin-1", sep="|")
 
             # lista os conteúdos dos arquivos zip que contém o padrão
             arqs = [

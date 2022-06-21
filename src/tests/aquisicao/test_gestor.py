@@ -61,7 +61,7 @@ def test_remove_duplicatas(gestor_etl: GestorETL) -> None:
     assert depara_cols == set(base_id)
     assert cols - set(gestor_etl._configs["COLS_DEPARA"]) == set(base)
 
-    gestor_etl.base_id = base_id
+    gestor_etl.base_id = base_id  # type: ignore
 
 
 @pytest.mark.run(order=5)
@@ -80,7 +80,7 @@ def test_ajusta_schema(gestor_etl: GestorETL) -> None:
         if not dtype.startswith("pd."):
             assert base[col].dtype == dtype
 
-    base_id = gestor_etl.base_id
+    base_id = gestor_etl.base_id  # type: ignore
     base_id = gestor_etl.ajusta_schema(
         base=base_id,
         fill=gestor_etl._configs["PREENCHER_NULOS"],

@@ -3,6 +3,7 @@ import os
 import random
 import shutil
 import sys
+import typing
 from pathlib import Path
 
 import pytest
@@ -14,7 +15,7 @@ except ModuleNotFoundError:
 
 
 @pytest.fixture(scope="session")
-def test_path() -> Path:
+def test_path() -> typing.Generator[Path, None, None]:
     caminho = Path(os.path.dirname(__file__)) / "data"
     caminho.mkdir(parents=True, exist_ok=True)
 
