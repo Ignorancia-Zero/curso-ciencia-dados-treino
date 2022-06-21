@@ -35,16 +35,16 @@ def download_dados_web(
     # garante que o caminho é um buffer para um arquivo local
     fechar = isinstance(caminho, str) or isinstance(caminho, Path)
     if fechar:
-        arq: typing.Union[typing.IO[bytes], typing.BinaryIO] = open(caminho, "wb")
+        arq = open(caminho, "wb")  # type: ignore
     else:
-        arq = caminho
+        arq = caminho  # type: ignore
 
     # gera um request para os dados
     response = requests.get(url, stream=True)
     total_size_in_bytes = int(response.headers.get("content-length", 0))
 
     # processa a base
-    progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)
+    progress_bar = tqdm(total=total_size_in_bytes, unit="iB", unit_scale=True)  # type: ignore
     for data in response.iter_content(block_size):
         progress_bar.update(len(data))
         arq.write(data)

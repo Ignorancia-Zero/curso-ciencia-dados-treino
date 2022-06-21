@@ -9,7 +9,7 @@ from pathlib import Path
 def configura_logs(
     formato: str = "{asctime} {levelname} ({module}:{lineno:d}) {message}",
     arquivo: bool = True,
-    pasta_logs: typing.Union[str, Path, None] = None
+    pasta_logs: typing.Union[str, Path, None] = None,
 ) -> str:
     """
     Inicia os objetos Logger e realiza as configurações de formatação,

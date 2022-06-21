@@ -9,9 +9,9 @@ import src.datamart.funcoes as fn
 from src.aquisicao.inep.docente import DocenteETL
 from src.aquisicao.inep.escola import EscolaETL
 from src.aquisicao.inep.gestor import GestorETL
-from src.aquisicao.inep.turma import TurmaETL
-from src.aquisicao.inep.matricula import _MatriculaRegiaoETL
 from src.aquisicao.inep.ideb import IDEBETL
+from src.aquisicao.inep.matricula import _MatriculaRegiaoETL
+from src.aquisicao.inep.turma import TurmaETL
 from src.utils.info import carrega_excel
 
 
@@ -163,25 +163,25 @@ def processa_docentes(
     :return: datamart com dados de docente incorporados
     """
     # carrega os dados de docente
-    etl = DocenteETL(
+    doc_etl = DocenteETL(
         entrada=aquis_entrada,
         saida=aquis_saida,
         ano=ano,
         criar_caminho=False,
         reprocessar=False,
     )
-    docente = etl.dados_saida[etl.bases_saida[0]]
-    depara = etl.dados_saida[etl.bases_saida[1]]
+    docente = doc_etl.dados_saida[doc_etl.bases_saida[0]]
+    depara = doc_etl.dados_saida[doc_etl.bases_saida[1]]
 
     # carrega os dados de turma
-    etl = TurmaETL(
+    tum_etl = TurmaETL(
         entrada=aquis_entrada,
         saida=aquis_saida,
         ano=ano,
         criar_caminho=False,
         reprocessar=False,
     )
-    turma = etl.dados_saida[etl.bases_saida[0]]
+    turma = tum_etl.dados_saida[tum_etl.bases_saida[0]]
 
     # adiciona os dados de escola ao depara
     depara = (
@@ -374,7 +374,7 @@ def processa_matricula(
     dados = list()
     for regiao in tqdm(["CO", "NORDESTE", "NORTE", "SUDESTE", "SUL"]):
         # carrega os dados de aluno
-        etl = _MatriculaRegiaoETL(
+        mat_etl = _MatriculaRegiaoETL(
             entrada=aquis_entrada,
             saida=aquis_saida,
             regiao=regiao,
@@ -382,8 +382,8 @@ def processa_matricula(
             criar_caminho=False,
             reprocessar=False,
         )
-        aluno = etl.dados_saida[etl.bases_saida[0]]
-        matricula = etl.dados_saida[etl.bases_saida[1]]
+        aluno = mat_etl.dados_saida[mat_etl.bases_saida[0]]
+        matricula = mat_etl.dados_saida[mat_etl.bases_saida[1]]
 
         # adiciona a informação de escola a base de alunos
         matricula = matricula.merge(turma_escola)
