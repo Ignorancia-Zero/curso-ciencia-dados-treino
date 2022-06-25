@@ -4,9 +4,10 @@ from pathlib import Path
 import geopandas as gpd
 
 from ._malha import _BaseMalhaIBGE
+from src.utils.geo import calcula_area_poligono
 
 
-class MalhaMunIBGE(_BaseMalhaIBGE):
+class MalhaBRIBGE(_BaseMalhaIBGE):
     def __init__(
         self,
         entrada: typing.Union[str, Path],
@@ -27,7 +28,7 @@ class MalhaMunIBGE(_BaseMalhaIBGE):
         super().__init__(
             entrada=entrada,
             saida=saida,
-            granularidade="mun",
+            granularidade="brasil",
             ano=ano,
             criar_caminho=criar_caminho,
             reprocessar=reprocessar,
@@ -40,7 +41,7 @@ class MalhaMunIBGE(_BaseMalhaIBGE):
 
         :return: lista de arquivos que compõem as bases de saída
         """
-        return ["malha_mun.parquet"]
+        return ["malha_br.parquet"]
 
     def _extract(self) -> None:
         """
@@ -56,12 +57,8 @@ class MalhaMunIBGE(_BaseMalhaIBGE):
         """
         self._dados_saida[self.bases_saida[0]] = (
             self.dados_entrada[str(self.ano)]
-            .rename(
-                columns={"CD_MUN": "CO_MUNICIPIO", "NM_MUN": "NO_MUN", "SIGLA": "UF"}
-            )
+            .rename(columns={"NM_PAIS": "NO_PAIS"})
             .assign(
-                CO_MUNICIPIO=lambda f: f["CO_MUNICIPIO"].astype(int),
-                AREA_KM2=lambda f: f["AREA_KM2"].astype(float),
                 ANO=lambda f: self.ano,
                 LATITUDE=lambda f: f["geometry"].apply(
                     lambda x: x.centroid.coords[0][1]
