@@ -6,6 +6,7 @@ from src.aquisicao.inep.gestor import GestorETL
 from src.aquisicao.inep.ideb import IDEBETL
 from src.aquisicao.inep.matricula import MatriculaETL
 from src.aquisicao.inep.turma import TurmaETL
+from src.aquisicao.ibge.malha_mun import MalhaMunIBGE
 
 
 class EnumETL(Enum):
@@ -15,15 +16,17 @@ class EnumETL(Enum):
     docente = "DOCENTE"
     matricula = "MATRICULA"
     ideb = "IDEB"
+    malha_mun = "MALHA_MUN"
 
 
 # lista os objetos ETL que fazem parte dos micro-dados do inep
-ETL_INEP_MICRO = [
+ETL_ANUAL = [
     EnumETL.escola,
     EnumETL.gestor,
     EnumETL.turma,
     EnumETL.docente,
     EnumETL.matricula,
+    EnumETL.malha_mun,
 ]
 
 
@@ -36,4 +39,5 @@ ETL_DICT = {
     EnumETL.docente: DocenteETL,
     EnumETL.matricula: MatriculaETL,
     EnumETL.ideb: IDEBETL,
+    EnumETL.malha_mun: MalhaMunIBGE,
 }
