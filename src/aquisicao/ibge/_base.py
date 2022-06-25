@@ -102,7 +102,6 @@ class _BaseFTPIBGE(_BaseETL, abc.ABC):
         """
         # ajusta os caminhos de entrada e saída
         entrada = Path(entrada) / "ibge" / sub_pasta
-        saida = Path(saida) / "ibge" / sub_pasta
 
         # chama o construtor do ETL Base
         super().__init__(entrada, saida, criar_caminho, reprocessar)
