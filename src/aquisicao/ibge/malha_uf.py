@@ -3,8 +3,8 @@ from pathlib import Path
 
 import geopandas as gpd
 
-from ._malha import _BaseMalhaIBGE
 from src.utils.geo import calcula_area_poligono
+from ._malha import _BaseMalhaIBGE
 
 
 class MalhaUFIBGE(_BaseMalhaIBGE):

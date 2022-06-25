@@ -16,7 +16,7 @@ def malha_etl(dados_path: Path, test_path: Path) -> MalhaMunIBGE:
         criar_caminho=False,
         reprocessar=False,
     )
-    etl._links = {"BR_Municipios_2021.zip": ""}
+    etl._ibge = {"BR_Municipios_2021.zip": ""}
 
     return etl
 

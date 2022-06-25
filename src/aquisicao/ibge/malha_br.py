@@ -4,7 +4,6 @@ from pathlib import Path
 import geopandas as gpd
 
 from ._malha import _BaseMalhaIBGE
-from src.utils.geo import calcula_area_poligono
 
 
 class MalhaBRIBGE(_BaseMalhaIBGE):
