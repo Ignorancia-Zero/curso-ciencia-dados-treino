@@ -26,31 +26,31 @@ def data() -> dict:
 
 
 @pytest.mark.run(order=1)
-def test_extract(malha_etl) -> None:
-    malha_etl.extract()
+def test_extract(ideb_etl: IDEBETL) -> None:
+    ideb_etl.extract()
 
-    assert malha_etl.dados_entrada is not None
-    assert len(malha_etl.dados_entrada) == 3
+    assert ideb_etl.dados_entrada is not None
+    assert len(ideb_etl.dados_entrada) == 3
     assert {
         "divulgacao_anos_finais_escolas_2019.zip",
         "divulgacao_anos_iniciais_escolas_2019.zip",
         "divulgacao_ensino_medio_escolas_2019.zip",
-    } == set(malha_etl.dados_entrada)
-    for d in malha_etl.dados_entrada.values():
+    } == set(ideb_etl.dados_entrada)
+    for d in ideb_etl.dados_entrada.values():
         assert isinstance(d, pd.DataFrame)
 
 
 @pytest.mark.run(order=2)
-def test_extrai_turma(malha_etl) -> None:
-    assert malha_etl.extrai_turma("divulgacao_anos_finais_escolas_2019.zip") == "AF"
-    assert malha_etl.extrai_turma("divulgacao_anos_iniciais_escolas_2019.zip") == "AI"
-    assert malha_etl.extrai_turma("divulgacao_ensino_medio_escolas_2019.zip") == "EM"
+def test_extrai_turma(ideb_etl: IDEBETL) -> None:
+    assert ideb_etl.extrai_turma("divulgacao_anos_finais_escolas_2019.zip") == "AF"
+    assert ideb_etl.extrai_turma("divulgacao_anos_iniciais_escolas_2019.zip") == "AI"
+    assert ideb_etl.extrai_turma("divulgacao_ensino_medio_escolas_2019.zip") == "EM"
 
 
 @pytest.mark.run(order=3)
-def test_seleciona_dados(malha_etl, data: dict) -> None:
-    df = malha_etl.dados_entrada["divulgacao_anos_finais_escolas_2019.zip"]
-    data["df"] = malha_etl.seleciona_dados(df)
+def test_seleciona_dados(ideb_etl: IDEBETL, data: dict) -> None:
+    df = ideb_etl.dados_entrada["divulgacao_anos_finais_escolas_2019.zip"]
+    data["df"] = ideb_etl.seleciona_dados(df)
     assert (
         len(
             {"SG_UF", "CO_MUNICIPIO", "NO_MUNICIPIO", "NO_ESCOLA", "REDE"}.intersection(
@@ -63,8 +63,8 @@ def test_seleciona_dados(malha_etl, data: dict) -> None:
 
 
 @pytest.mark.run(order=4)
-def test_obtem_metricas(malha_etl, data: dict) -> None:
-    data["dados"] = malha_etl.obtem_metricas(data["df"], "AF")
+def test_obtem_metricas(ideb_etl: IDEBETL, data: dict) -> None:
+    data["dados"] = ideb_etl.obtem_metricas(data["df"], "AF")
 
     assert set(data["df"].iloc[:, 1:].columns) == set(data["dados"]["COLUNA"])
     assert set(range(2005, 2022, 2)) == set(data["dados"]["ANO"])
@@ -84,8 +84,8 @@ def test_obtem_metricas(malha_etl, data: dict) -> None:
 
 
 @pytest.mark.run(order=5)
-def test_formata_resultados(malha_etl, data: dict) -> None:
-    data["df"] = malha_etl.formata_resultados(data["df"], data["dados"])
+def test_formata_resultados(ideb_etl: IDEBETL, data: dict) -> None:
+    data["df"] = ideb_etl.formata_resultados(data["df"], data["dados"])
 
     assert set(["ID_ESCOLA", "ANO"] + list(data["dados"]["METRICA"].unique())) == set(
         data["df"].columns
@@ -100,20 +100,20 @@ def test_formata_resultados(malha_etl, data: dict) -> None:
 
 
 @pytest.mark.run(order=6)
-def test_concatena_saidas(malha_etl, data) -> None:
-    df2 = malha_etl.seleciona_dados(
-        malha_etl.dados_entrada["divulgacao_anos_iniciais_escolas_2019.zip"]
+def test_concatena_saidas(ideb_etl, data) -> None:
+    df2 = ideb_etl.seleciona_dados(
+        ideb_etl.dados_entrada["divulgacao_anos_iniciais_escolas_2019.zip"]
     )
-    dados = malha_etl.obtem_metricas(df2, "AI")
-    df2 = malha_etl.formata_resultados(df2, dados)
+    dados = ideb_etl.obtem_metricas(df2, "AI")
+    df2 = ideb_etl.formata_resultados(df2, dados)
 
-    df3 = malha_etl.seleciona_dados(
-        malha_etl.dados_entrada["divulgacao_ensino_medio_escolas_2019.zip"]
+    df3 = ideb_etl.seleciona_dados(
+        ideb_etl.dados_entrada["divulgacao_ensino_medio_escolas_2019.zip"]
     )
-    dados = malha_etl.obtem_metricas(df3, "EM")
-    df3 = malha_etl.formata_resultados(df3, dados)
+    dados = ideb_etl.obtem_metricas(df3, "EM")
+    df3 = ideb_etl.formata_resultados(df3, dados)
 
-    res = malha_etl.concatena_saidas([data["df"], df2, df3])
+    res = ideb_etl.concatena_saidas([data["df"], df2, df3])
 
     assert {
         "ID_ESCOLA",
