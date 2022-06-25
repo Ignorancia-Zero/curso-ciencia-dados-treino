@@ -32,7 +32,7 @@ ETL_ANUAL = [
     EnumETL.matricula,
     EnumETL.malha_mun,
     EnumETL.malha_uf,
-    EnumETL.malha_br
+    EnumETL.malha_br,
 ]
 
 
