@@ -29,3 +29,15 @@ def carrega_excel(nome_excel: str, **kwargs) -> pd.DataFrame:
     """
     global CAMINHO_INFO
     return pd.read_excel(CAMINHO_INFO / nome_excel, **kwargs)
+
+
+def carrega_csv(nome_csv: str, **kwargs) -> pd.DataFrame:
+    """
+    Carrega arquivo csv da pasta info da ferramenta
+
+    :param nome_csv: nome do arquivo csv
+    :param kwargs: argumentos de carregamento
+    :return: data frame pandas com conteúdo
+    """
+    global CAMINHO_INFO
+    return pd.read_csv(CAMINHO_INFO / nome_csv, **kwargs)

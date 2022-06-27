@@ -4,8 +4,8 @@ import click
 
 import src.configs as conf_geral
 from src.aquisicao.executa import executa_etl
-from src.aquisicao.executa import executa_micro_inep
-from src.aquisicao.opcoes import ETL_INEP_MICRO
+from src.aquisicao.executa import executa_etl_por_ano
+from src.aquisicao.opcoes import ETL_ANUAL
 from src.aquisicao.opcoes import EnumETL
 from src.datamart.config import DMGran
 from src.datamart.executa import executa_datamart
@@ -80,7 +80,7 @@ def processa_dado(
 @aquisicao.command()
 @click.option(
     "--etl",
-    type=click.Choice([s.value for s in ETL_INEP_MICRO]),
+    type=click.Choice([s.value for s in ETL_ANUAL]),
     help="Nome do ETL a ser executado",
 )
 @click.option(
@@ -112,7 +112,7 @@ def processa_dado(
     show_default=True,
     help="Flag indicando se nós devemos forçar o reprocessamento dos dados",
 )
-def processa_micro_inep(
+def processa_etl_anual(
     etl: str,
     ano: str,
     entrada: str,
@@ -121,7 +121,7 @@ def processa_micro_inep(
     nao_reprocessar: bool,
 ) -> None:
     """
-    Executa o pipeline de ETL de um micro-dado do INEP para um ano determinado
+    Executa o pipeline de ETL de um dado que é alterado anualmente
 
     :param etl: nome do ETL a ser executado
     :param ano: ano da base a ser processada
@@ -131,7 +131,7 @@ def processa_micro_inep(
     :param nao_reprocessar: Flag indicando se nós devemos forçar o reprocessamento dos dados
     """
     configura_logs()
-    executa_micro_inep(
+    executa_etl_por_ano(
         etl=etl,
         ano=ano,
         entrada=entrada,

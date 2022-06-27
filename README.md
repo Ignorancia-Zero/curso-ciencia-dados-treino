@@ -73,6 +73,7 @@ conda install -c conda-forge openpyxl==3.0.9
 conda install -c anaconda yaml==5.4.1
 conda install -c anaconda requests==2.26.0
 conda install -c conda-forge tqdm==4.62.3
+conda install -c conda-forge osmnx==1.1.1
 conda install -c conda-forge mypy==0.942
 pip install types-beautifulsoup4==4.11.1
 conda install -c conda-forge sphinx==3.5.4

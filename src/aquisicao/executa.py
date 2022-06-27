@@ -23,7 +23,7 @@ def executa_etl(
 
 
 @log_erros
-def executa_micro_inep(
+def executa_etl_por_ano(
     etl: str,
     ano: str,
     entrada: Path,

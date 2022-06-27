@@ -1,0 +1,570 @@
+Formato,Nome Formato,Programas que usam formato,Autor
+7z,7z compressed archive file,7Zip WinRAR WinZip,7-Zip and Igor Pavlov
+ace,WinAce Compressed File,E-merge WinAce (Windows) ESTsoft ALZip (Windows) IZArc (Windows) MacUnace (Mac) PeaZip (Windows) The Unarchiver (Mac),WinAce
+apk,Android Package File,Google Android SDK 7-Zip WinRar Android phones,Android
+bz2,BZzip2 compressed archive file,Corel WinZip Smith Micro StuffIt Deluxe 2010 WinRAR 5 PeaZipExternal Link 7-Zip Incredible Bee Archiver The Unarchiver,Julian Seward
+crx,Chrome Extension,"7-Zip (Windows) Google Chrome (Windows, Mac & Linux)",Google
+dd,DiskDoubler Archive,DDExpand (Mac) SuperDoubler (Mac) Symantec Norton DiskDoubler (Mac) The Unarchiver (Mac),Symantec
+deb,Debian Software Package,7-Zip (Windows) Adept (Linux) Cydia (iOS) Debian package management system (Linux) IZArc (Windows) Synaptic Package Manager (Linux),
+gz,Gnu Zipped Archive File,Smith Micro StuffIt Deluxe 2010 Corel WinZip 18.5 7-Zip Xarchive WinRAR 5,The GNU Project
+gzip,Gnu Zipped File,Smith Micro Stufflt Deluxe 2010 (Windows) Corel WinZip 18.5 (Windows) 7-Zip (Windows) Smith Micro Stufflt Deluxe 16 (Mac) Apple archive Utility (Mac) Gzip (Linux) Xarchive (Linux),"Jean-loup Gailly, Mark Adler"
+jar,Java Archive File,Oracle Java Runtime Environment Corel WinZip Mac Edition 3 Apple Jar Launcher Web Browsers,"Netscape, Sun Microsystems, Oracle Corporation"
+mht,Multipurpose Internet Mail Extension HTML,Mozilla Firefox Google Chrome Microsoft Internet Explorer Safari,Microsoft
+mpkg,Meta Package File,Apple Installer (Mac),
+pup,PlayStation 3 Update File,PS3 PUP Extractor (Windows),Sony
+r01,WinRAR Split Archive Part 1,7-Zip (Windows) Corel WinZip (Windows) Incredible Bee Archiver (Mac) RARLAB RAR (Mac & Linux) WinRAR (Windows),RARLAB
+rar,WinRAR Compressed Archive,7Zip StuffIt WinRAR WinZip,Eugene Roshal
+rpm,Red Hat Package Manager File,Alien (Linux) Incredible Bee Archiver (Mac) Red Hat Package Manager (Linux) The Unarchiver (Mac),Red Hat
+sit,StuffIt Archive,Smith Micro StuffIt Deluxe (Windows & Mac) The Unarchiver (Mac) Incredible Bee Archiver (Mac) ExtractNow (Windows),Smith Micro
+sitx,StuffIt X Archive,Incredible Bee Archiver (Mac) Smith Micro StuffIt Deluxe (Windows & Mac) The Unarchiver (Mac),Smith Micro
+snb,S Note File,Samsung S Note snbopen,Samsung
+tar,Consolidated Unix File Archive,Apple Archive Utility GNU Tar Corel WinZip 18.5 7-Zip,The GNU Project
+tar.gz,Compressed Tarball File,7-Zip (Windows) Acubix PicoZip (Windows) Apple Archive Utility (Mac) Ark (Linux) Corel WinZip (Windows) gzip (Linux) PeaZip (Windows) Smith Micro StuffIt Deluxe (Windows & Mac) The Unarchiver (Mac) WinInizio ZipGenius (Windows) WinRAR 5 (Windows) Xarchive (Linux) ZDevs ZArchiver (Android),The GNU Project
+tbz,Bzip Compressed Tar Archive,7-zip (Linux) Apple Archive Utility (Mac) Smith Micro StuffIt Deluxe (Windows & Mac) Corel WinZip (Windows) Incredible Bee Archiver (Mac) tar (Linux),
+tgz,Gzipped Tar File,"Smith Micro Stuffit Deluxe 2010 (Windows, Mac) WinRAR 5 (Windows) Corel WinZip 18.5 (Windows) 7-Zip (Windows) Zipeg (Windows, Mac) Incredible Bee Archiver (Mac) Tar (Linux) Gunzip (Linux) Pkgtool (Linux)",
+zip,ZIP compression,StuffIt WinRAR Winzip,PKWARE
+zipx,Extended Zip File,"B1 Free Archiver (Windows, Mac, Linux & Android) ConeXware PowerArchiver (Windows) Corel WinZip (Windows & Mac) PeaZip (Windows) RARLAB RAR (Android) The Unarchiver (Mac)",Corel
+3ga,3GPP Audio File,Windows Media Player QuickTime Player VLC Media Player,3rd Generation Partnership Project (3GPP)
+aa,Audible Audio Book File,Audible AudibleManager (Windows) Apple iTunes (Windows & Mac) Nero (Windows) Audials Tunebite (Windows) SoundTaxi Media Suite (Windows) TuneCab (Windows),Audible
+aac,MPEG-2 Advanced Audio Coding File,Windows Media Player iTunes KMPlayer RealPlayer VideoLAN VLC Media Player,"Fraunhofer IIS, AT&T Bell Laboratories, Dolby, and Sony Corporation"
+aax,Audible Enhanced Audiobook File,Apple iTunes (Windows & Mac),Audible
+adpcm,Adaptive Differential Pulse-Code Modulation File,,
+aif,Audio Interchange File Format,Windows Media Player Apple Quicktime Winamp VLC Media Player,Apple Inc
+aifc,Compressed Audio Interchange File,Apple iTunes Apple QuickTime Player Microsoft Windows Media Adobe Audition CC Vgmstream Cog,Apple
+aiff,Audio Interchage File Format,Apple QuickTime VLC media Player Winamp Windows Media Player,Apple Inc
+amr,Adaptive Multi-Rate Codec File,Audacity Android Open Source software AMR Player QuickTime Real Player VLS Media Player Apple iPhone,3rd Generation Partnership Project (3GPP)
+ape,Monkey's Audio Lossless Audio File,Adobe Audition CC 2015 AIMP Cog Monkey's Audio MPlayer NCH WavePad Nullsoft Winamp with Monkey's Audio Plugin,Matthew T. Ashland
+asx,Microsoft Advanced Stream Redirector File,Microsoft Windows Media Player Nullsoft Winamp Roxio Creator NXT Pro 3 Ventis Media MediaMonkey 4 GRETECH GOM Player VideoLAN VLC media player,Microsoft
+au,Audio File,Nullsoft Winamp Apple QuickTime Player Microsoft Windows Media Player RealNetworks RealPlayer Cloud Adobe Audition CC,Sun Microsystems
+aup,Audacity Project File,Audacity,Audacity
+awb,AMR-WB Audio File,AMR Player FairStars Audio Converter Nokia Multimedia Converter,Nokia
+caf,Apple Core Audio Format,Soundtrack Pro Logic Studio QuickTime,Apple Inc
+cda,CD Audio Track Shortcut,Nullsoft Winap VideoLAN VLC media player Apple iTunes Microsoft windows Media Player,
+cdo,Crescendo Music Notation File,NCH Crescendo Music Notation Editor (Windows),NCH Software
+flac,Free Lossless Audio Codec File,Real Player VLC Media Player Windows Media Player,Xiph.Org Foundation
+gsm,Global System for Mobile Audio File,VideoLAN VLC media player SoX NCH Switch,
+iff,EA Interchange File Format,"ACD Systems ACDSee (Windows) ACD Systems Canvas (Windows) Adobe Audition (Windows & Mac) Apple QuickTime Player (Windows & Mac) Cloanto Amiga Forever (Windows, Mac & Linux) Corel PaintShop Pro X8 (Windows) IFFPencil (Windows) IFFSnooper (Mac) IrfanView (Windows) ShedWorx Smart Converter (Mac) XnViewMP (Windows & Linux)",Electronic Arts
+kar,Karaoke files,Mireth Technology Music Man Nullsoft Winamp PG music Band-in-a-Box Recisio KaraFun vanBasco's Karaoke Player,Tune 1000 Corp
+koz,Audiokoz Music File,This file can not be opened on a computer.,Audiokoz
+m3u8,UTF-8 M3U Playlist File,Apple iTunes CocoModX Foobar2000 Nullsoft Winamp RealNetworks RealPlayer Cloud Roxio Creator NXT Pro 3 Songbird VideoLAN VLC media player XMMS,
+m4a,MPEG-4 Audio Layer,Apple QuickTime Player Apple iTunes Microsoft Windows Media Player VideoLan VLC Media Player,Apple
+m4b,MPEG-4 Audio Book File,"Apple iTunes (Windows & Mac) File Viewer Plus (Windows) Nullsoft Winamp (Windows) Microsoft Windows Media Player (Windows) Roxio Creator NXT Pro (Windows) Ventis Media MediaMonkey (Windows) VideoLAN VLC media player (Windows, Mac & Linux)",Apple
+m4p,iTunes Music Store Audio File,KMPlayer iTunes Spotify VideoLAN VLC Madia Player QuickTime,Apple Inc.
+m4r,iPhone Ringtone File,Apple QuickTime Player Apple iTunes,Apple Inc
+mid,Musical Instrument Digital Interface MIDI-sequention Sound,Audio Evolution Sonar Master Tacks Pro GarageBand,Various
+midi,MIDI files,Apple QuickTime Player Microsoft Windows Media Player Nullsoft Winamp Sonar GarageBand Audio Evolution Master Tacks Pro,Various
+mmf,Synthetic Music Mobile Application File,"Yamaha MidRadio Player (Windows, Mac) Yamaha Mobile Contents Player (Windows)",Yamaha
+mp2,MPEG Layer II Compressed Audio File,"Apple iTunes (Windows, Mac) Microsoft Windows Media Player (Windows) RealNetworks RealPlayer Cloud (Windows, Mac, Linux) VideoLAN VLC Media Player (Windows, Mac, Linux) PeonySoft MP2 Converter (Windows) Adobe Audition (Windows, Mac)",Moving Picture Experts Group
+mp3,MPEG Layer 3 Audio,RealOne WinAmp Windows Media Player iTunes Real Player,Fraunhofer Institute
+mpa,MPEG-2 Audio File,"Apple iTunes (Windows, Mac) Apple QuickTime Player (Windows, Mac) Microsoft Windows Media Player (Windows) RealNetwork RealPlayer Cloud (Windows, Mac & Linux) VideoLAN VLC media player (Windows, Mac, Linux & iOS)",
+mpc,Musepack Compressed Audio File,Aqualung Audacious DeliPlayer jetAudio JRiver Media Center MPlayer Nullsoft Winamp (plug-in needed) VideoLAN VLC media player,Musepack
+mpga,MPEG-1 Layer 3 Audio File,Apple iTunes Microsoft Windows Media Player Real Networks Linux-Any Audio Player,
+nfa,Netflix Audio File,Netflix (iOS & Android),Netflix
+oga,Ogg Vorbis Audio File,"Apple QuickTime Player (Windows, Mac & Linux) File Viewer Plus (Windows) JRiver Media Center (Windows) Media Player Classic (Windows) MPlayer (Mac) Nullsoft Winamp (Windows) Totem (Linux) VideoLAN VLC media player (Windows, Mac & Linux) Zinf (Windows)",Xiph.Org
+ogg,Ogg Vorbis Audio File,Apple QuickTime Player Real Player Windows Media Player,Xiph.Org Foundation
+oma,Sony OpenMG audio,"Sony SonicStage (Windows) VideoLAN VLC media player (Windows, Mac, Linux)",Sony
+opus,Opus Audio File,AIMP VideoLAN VLC Media Player OPUS tools,Xiph.org
+qcp,Qualcomm PureVoice Audio File,QUALCOMM PureVoice Player-Recorder QUALCOMM PureVoice Converter QUALCOMM PureVoice SDK VideoLAN VLC Media Player,Qualcomm
+ra,Real Audio File,"RealNetworks RealPlayer Cloud (Windows, Mac, Linux, iOS, Android) VideoLAN VLC Media Player (Windows, Mac, Linux) DVDVideoSoft Free Audio Converter (Windows) Web Browser With the RealPlayer Plugin (Windows, Mac, Linux)",RealNetworks
+ram,Real Media Audio Metadata File,RealNetworks RealPlayer Cloud VideoLAN VLC Media Player,Real Networks
+rta,TrueRTA Project File,True Audio TrueRTA Adobe RoboHelp 11,True Audio
+wav,WAVE Audio,CyberLink PowerDirector Microsoft Windows Media Player Roxio Creator 2009 VideoLAN VLC Media Player,Microsoft & IBM
+wma,Windows Media (Metafile),MPlayer Realplayer VLC Media Player Windows Media Player Windows Movie Maker Zune software Open Source,Microsoft
+xspf,XML Shareable Playlist Format,Roxio Creator NXT Pro (Windows) VideoLAN VLC media player (Windows) Clementine (Windows VideoLAN VLC media player (Mac) Clementine (Mac) Amarok (Linux) Audacious (Linux) VideoLAN VLC media player (Linux) Clementine (Linux),N/A – open source
+3dm,Rhino 3D Model,Autodesk Fusion 360 (Windows) IMSI TurboCAD Deluxe v8 (Mac) McNeel Rhino (Windows & Mac),Robert McNeel & Associates
+3ds,3D Studio Scene,"Adobe Photoshop (Windows & Mac) Autodesk 3ds Max (Windows) CADSoftTools ABViewer (Windows) Cheetah3D (Mac) GLC_Player (Windows, Mac & Linux) IMSI TurboCAD Deluxe (Windows & Mac) MAXON Cinema 4D (Windows & Mac) MeshLab (Windows & Mac) pmG messiahStudio (Windows & Mac) Trimble SketchUp (Windows & Mac)",Autodesk
+dwg,AutoCAD Drawing Database File,Adobe Illustrator AutoCAD Autodesk DWG TrueView CorelCAD,Autodesk
+dxf,Drawing Exchange Format File,Adobe Illustratror AutoCAD CorelCAD Open Office PaintShop Pro,Autodesk
+max,3ds Max Scene File,Autodesk 3ds Max,Autodesk
+obj,Wavefront 3D Object File,"Adobe Photoshop CC (Windows & Mac) Autodesk AutoCAD (Windows) Autodesk Maya (Windows, Mac & Linux) Blender (Windows, Mac & Linux) Cheetah3D (Mac) Dassault Systemes SolidWorks (Windows) DAZ 3D DAZ Studio (Windows & Mac) GLC_Player (Linux) IMSI TurboCAD Deluxe (Mac) IMSI TurboCAD Pro (Windows) MeshLab (Windows, Mac & Linux) MAXON Cinema 4D (Windows & Mac) NewTek Lightwave (Windows & Mac) Siemens Solid Edge (Windows) Smith Micro Poser (Windows & Mac)",Wavefront Technologies
+stp,STEP 3D CAD File,"Autodesk Fusion (Windows & Mac, iOS, Android & Windows Phone) CADSoftTools ABViewer (Windows) Dassault Systemes CATIA (Windows & Linux) eMachineShop Free Online STEP File Viewer (Web) FreeCAD (Windows, Mac & Linux) ideaMK STP Viewer (Windows) IMSI TurboCAD Pro (Windows & Mac) LKSoft IDA-STEP (Windows & Linux) Okino Computer Graphics PolyTrans (Windows) ShareCAD.org (Web) Wikifactory (Web)",
+aae,Sidecar Image Edit File,Apple Photos (Mac) Apple Text Edit (Mac) Microsoft Notepad (Windows),Apple
+adt,ACT! Document Template,Swiftpage Act! (Windows),Sage Software
+bok,TestGen Testbank File,Pearson Education TestGen (Windows & Mac),Pearson Education
+cel,Affymetrix Probe Results File,"Affymetrix Tiling Analysis Software (Windows) dChip (Windows) multi-aff-py (Windows, Mac & Linux) RMAExpress (Windows) The MathWorks MATLAB (Windows) VSN GenStat (Windows)",Affymetrix
+clp,Windows Clipboard File,Corel PaintShop Pro (Windows) IrfanView (Windows) Microsoft ClipBook Viewer (Windows),Microsoft
+cma,Coach Activity File,CMA Coach (Windows),CMA Foundation
+dif,Data Interchange Format,"Apache OpenOffice (Windows, Mac & Linux) Corel WordPerfect (Windows) Gnumeric (Windows & Linux) IBM Collaboration Solutions (Windows) Microsoft Access (Windows) Microsoft Excel (Windows & Mac) Microsoft Notepad (Windows) Planamesa NeoOffice (Mac) SAS Institute SAS (Windows & Mac) Other text editors",Microsoft
+efx,eFax Document,"j2 Global Communications eFax (Windows, Mac & Linux)",j2 Global Communications
+fcpevent,Final Cut Pro Event File,Apple Final Cut Pro X (Mac),Apple
+flo,RFFlow Flowchart File,RFF Electronics RFFlow (Windows),RFF Electronics
+gbr,Gerber File,"Altium Designer (Windows) Artwork Conversion GBR2DXF (Windows) gEDA (Mac & Linux) Gerbv (Windows, Mac & Linux) GraphiCode GC-Prevue (Windows) PentaLogix ViewMate (Windows) Pentalogix ViewMaster (Windows) PTC Creo View Express (Windows)",Ucamco
+gcw,Microsoft Mathematics Worksheet,Microsoft Mathematics (Windows),Microsoft
+ged,GEDCOM Genealogy Data File,"Ages! (Windows) Ancestral Author (Windows) Behold (Windows) GeneWeb (Windows, Mac & Linux) Gramps (Windows, Mac & Linnux) Leister Prodcustions Reunion (Mac) LifeLines (Windows & Linux) RootsMagic (Windows) Taurus FamilyTree (Windows & Mac) Thoughtful Creations Genbox Family History (Windows)",The LDS Church
+gms,Gesture and Motion Signal File,"LibGMS (Windows, Mac & Linux)",GMS
+i5z,IUCLID 5 Import/Export File,IUCLID5 (Windows),IUCLID
+ip,IconPackage Theme File,7-Zip (Windows) Stardock IconPackage (Windows),Stardock
+itl,iTunes Library File,Apple iTunes,Apple
+keychain,Mac OS X Keychain File,Apple Keychain Access,Apple
+mtw,Minitab Worksheet File,Minitab (Windows),Minitab
+nfi,Netflix Information File,Netflix (iOS & Android),Netflix
+nfs,Netflix Subtitle File,Netflix (iOs & Android),Netflix
+one,OneNote Document,Microsoft OneNote 2016 (Windows) Outline (Mac),Microsoft
+ova,Open Virtual Appliance,"Oracle VM Virtualbox (Windows, Mac & Linux) VMware Fusion (Mac) VMware OVF Tool (Windows, Mac & Linux) VMware vCenter Converter (Windows) VMware Workstation (Windows & Linux)",VMware
+ovf,Open Virtualization File,"Oracle VM Virtualbox (Windows, Mac & Linux) VMware Fusion (Mac) VMware OVF Tool (Windows, Mac & Linux) VMware Workstation (Windows & Linux)",VMware
+qb2011,QuickBooks 2011 File,Intuit QuickBooks (Mac),Intuit
+quickendata,Quicken Essentials for Mac Data File,Intuit Quicken (Mac),Intuit
+rte,Revit Project Template,Autodesk AutoCAD Architecture (Windows) Autodesk MEP (Windows) Autodesk Revit Structure (Windows),Autodesk
+rvt,Revit Project File,Autodesk AutoCAD Architecture (Windows) Autodesk MEP (Windows) Autodesk Revit Structure (Windows),Autodesk
+sdf,Standard Data File,Pervasive PSQL dBase Rosenvick AspireGold,
+tax,TurboTax Tax Return,Intuit TurboTax (Windows & Mac),Intuit
+tax2012,TurboTax 2012 Tax Return,Intuit TurboTax Deluxe (Windows & Mac) TurboTax Online,Intuit
+tax2014,TurboTax 2014 Tax Return,Intuit TurboTax Deluxe (Windows & Mac),Intuit
+tax2016,TurboTax 2016 Tax Return,Intuit TurboTax Deluxe (Windows & Mac),Intuit
+vcf,vCard File,Microsoft Windows Contacts Palm Desktop QUALCOMM Eudora Microsoft Outlook 2013 vCard Organizer Nokia PC Suite,Internet Mail Consortium
+vcs,vCalendar Event File,Apple Calendar (Mac) Calligra Suite (Linux) Evolution (Linux) Microsoft Outlook 2016 (Windows & Mac),
+xmind,XMind Workbook File,"Xmind (Windows, Mac & Linux) Seavus iMindQ (Windows, Mac & iOS)",XMind
+accdb,Access 2007 Database File,Microsoft Access (Windows) Microsoft Visual Studio (Windows) MDB Viewer (Windows & Mac),Microsoft
+bup,DVD Info Backup File,CD Indexer Brother Embroidery System File PC-Bibliothek Update File,
+crypt,WhatsApp Encrypted Dastabase File,"WhatsApp Messenger (Android, iOS & Windows Phone) WhatsApp Xtract (Android)",WhatsApp
+db,Database file,Microsoft Windows Microsoft Access 2013 Corel paradox Libre Office SQ lite,Microsoft Corporation
+dbf,Database File,dBase Microsoft Access 2016 Microsoft Excel 2016 Microsoft Visual FoxPro Corel Quattro Pro X7 Apache OpenOffice HiBase Group DBF Viewer 2000 Astersoft DBF Manager DBF Viewer Plus DBFView Swiftpage Act! Alpha Software Alpha Anywhere Planamesa NeoOffice (Mac) GTK DBF Editor (Mac & Linux) multisoft FlagShip (Linux),dBASE
+mdb,Microsoft Access Database,Freewind MDB Converter (Windows) Kexi (Linux) mdb-expot (Linux) MDBopener (Web) MDB Viewer (Mac) MDB Viewer Plus (Windows) Microsoft Access 2016 (Windows) Microsoft Visual Studio 2013 (Windows) SAS Institute SAS (Windows & Linux) Wolfram Research Mathematica (Windows & Mac),Microsoft
+pdb,Program Database,ICE Book Reader Palm Reader Microsoft Visual Studio Pegasus Quicken,Various
+sql,Structured Query Language Data File,"Altova DatabaseSpy (Windows) Apple TextEdit (Mac) Bare Bones BBEdit (Mac) gVim (Windows) MacroMates TextMate (Mac) MalcolmHardie Solutions SQLEditor (Mac) Microsoft Notepad (Windows) MySQL (Windows, Mac & Linux) Richardson RazorSQL (Windows, Mac & Linux) Other text editors",
+apa,RSView Development Project Archive,Rockwell Automation RSView Studio (Windows) RSView ME (Windows),Rockwell Automation
+asc,ActionScript Communication File,Adobe Flash Professional (Windows & Mac),Adobe Systems
+asm,Assembly Language Source Code File,File Viewer Plus (Windows) GNU Emacs (Linux) gVim (Windows) MacroMates TextMate (Mac) MacVim (Mac) Microsoft Notepad (Windows) Pico (Linux) Vim (Linux) Any Text Editor,
+b,BASIC Source Code File,FreeBasic (Windows) Microsoft Visual Studio (Windows) PowerBASIC (Windows) PureBasic (Windows) Any text editor (Windows & Mac),
+bas,BASIC Source Code File,"BBC BASIC for Windows (Windows) Blitz Research BlitzMax (Windows, Mac & Linux) FreeBASIC (Windows) Microsoft Visual Studio (Windows) PowerBASIC (Windows) PureBasic (Windows) SoftMaker Office (Windows) True BASIC (Windows)",
+bet,BETA Source File,"BETA Compiler (Windows, Mac & Linux) Any Text Editor",
+bluej,BlueJ Package File,"BlueJ (Windows, Mac & Linux)",University of Kent
+c,C/C++ Source Code File,"Apple Xcode (Mac) BloodshedSoftware Dev-C++ (Windows) Borland C++Builder (Windows) Code::Blocks (Windows, Mac & Linux) Eclipse IDE for C Developers (Windows, Mac & Linux) Embarcadero C++Builder (Windows) ES-Computing EditPlus (Windows) Freescale CodeWarrior Development Tools (Mac) GNU Emacs (Linux) gVim (Windows) MacroMates TextMate (Mac) Microsoft Visual Studio 2013 (Windows) Vim (Linux) ZinjaI (Windows, Mac & Linux)",
+cbl,COBOL Source Code File,"Alchemy Solutions NetCOBOL (Windows) File Viewer Plus (Windows) GnuCOBOL (Windows, Mac & Linux) IBM COBOL (Windows) TinyCOBOL (Linux)",
+ccc,Dev-C++ Code Completion Cache,BloodshedSoftware Dev-C++ (Windows) Orwell Dev-C++ (Windows),
+cd,Visual Studio Class Diagram,Microsoft Visual Studio (Windows),Microsoft
+class,Java Class File,"Apple Jar Launcher (Mac) dirtyJOE (Windows) DJ Java Decompiler (Windows) Eclipse IDE for Java Developers (Windows, Mac & Linux) JD-GUI (Windows, Mac & Linux) Oracle Java Runtime Environment (Windows, Mac & Linux)",Oracle
+cod,Compiled Source Code,BlackBerry JDE (Windows) dBase (Windows) Microsoft Visual Studio (Microsoft),
+cpp,C++ Source Code File,"Apple Xcode (Mac) BloodshedSoftware Dev-C++ (Windows) Code::Blocks (Windows, Mac & Linux) Eclipse IDE for C Developers (Windows, Mac & Linux) Embarcadero Technologies C++ Builder (Windows) ES-Computing EditPlus (Windows) Freescale CodeWarrior Cevelopment Tool (Mac) GNU Compiler Collection (Mac & Linux) MacroMate TextMate (Mac) Microsoft Visual Studio 2013 (Windows)",
+cs,Visual C# Source Code File,"Adobe Dreamweaver (Windows & Mac) ES-Computing EditPlus (Windows) IC Code SharpDevelop (Windows) Microsoft Visual Studio (Windows) MonoDevelop (Windows, Mac & Linux) Notepad++ (Windows)",Microsoft
+d,D Source Code File,"Code::Blocks (Windows, MAC & Linux) Digital Mars D compiler (Windows & Linux) GDC (MAC & Linux) MacroMates TextMate (MAC) Any Text Editor",
+def,C++ Module-Definition File,Microsoft Visual Studio (Windows) Any Text Editor,
+dtd,Document Type Definition File,"Altova XMLSpy (Windows, Mac & Linux) Apple TextEdit (Mac) JAPISoft EditiX (Windows) Liquid Technologies Liquid XML Studio (Windows) MacroMates TextMate (Mac) Microsoft Notepad (Windows) Microsoft Visual Studio (Windows) Progress Stylus Studio (Windows) SyncRO Soft oXygen XML Editor (Windows, Mac & Linux) Other Text Editors",
+erb,Ruby ERB Script,Apple TextEdit (Mac) Microsoft Notepad (Windows) Panic Coda 2 (Mac) Any Text Editor,
+fla,Adobe Flash Animation,Adobe Flash Professional (Windows & Mac),Adobe Systems
+fsproj,Visual F# Project File,Microsoft Visual Studio (Windows),Microsoft
+fxc,FilePackager Configuration,DIMDATA FilePackager (Windows),DIMDATA
+h,C/C++/Objective-C Header File,"BloodshedSoftware Dev-C++ (Windows) Borland C++ Compiler (Windows) Code::Blocks (Windows, Mac & Linux) Eclipse IDE for C Developers (Windows, Mac & Linux) Embarcadero C++ Builder (Windows) GNU Compiler Collection (Mac & Linux) GNU Emacs (Linux) gVim (Windows) MacroMates TextMate (Mac) MacVim (Mac) Microsoft Visual Studio (Windows) Vi (Linux) Any Text Editor",
+hpp,C++ Header File,"Apple Xcode (Mac) BloodshedSoftware Dev-C++ (Windows) Code::Blocks (Windows, Mac & Linux) Embarcadero Technologies C++ Builder (Windows) GNU Compiler Collection (Mac & Linux) MacroMates TextMate (Mac) Microsoft Visual Studio (Windows)",
+ise,InstallShield Express Project File,Flexera InstallShield (Windows),Flexera Software
+iwb,IWBasic Source Code File,IconicWind IWBasic (Windows),IconicWind Software
+java,Java Source Code File,"Apple Xcode (Mac) Eclipse IDE for Java Developers (Windows, Mac & Linux) ES-Computing EditPlus (Windows) Google Android Studio (Windows, Mac & Linux) GNU Emacs (Linux) gVim (Windows) javac (Linux) MacoMates TextMate (Mac) MacVim (Mac) Microsoft Notepad (Windows) Oracle Java Virtual Machine (Windows, Mac & Linux) Oracle NetBeans (Windows, Mac & Linux) Vi (Linux) Xinox JCreator (Windows) Any Text Editor",Oracle
+kv,Kivy Language File,"Kivy (Windows, Mac & Linux)",Kivy Organization
+lua,Lua Source File,Addon Studio for World of Warcraft (Windows) Blizzard World of Warcraft Interface AddOn Kit (Windows & Mac) GNU Compiler Collection (Mac & Linux) GNU Emacs (Linux) Microsoft Notepad (windows) Notepad++ (Windows) Rovio Mobile Angry Birds (Mac) Vim (Linux) Other text editor,
+m,Objective-C Implementation File,"Apple compiler (Linux) Apple Xcode (Mac) Bare Bones BBEdit (Mac) GNU Compiler Collection (Mac & Linux) gVim (Windows) jEdit (Windows, Mac & Linux) MacroMates TextMate (Mac) MacVim (Mac) Richardson EditRocket (Windows, Mac & Linux) Stepstone compiler (Linux) Vim (Linux)",Apple
+m4,Macro Processor Library,m4 (Linux) MacroMates TextMate (Mac) Any Text Editor,
+md,Markdown Documentation File,"Apple TextEdit (Mac) Daring Fireball Markdown (Windows, Mac & Linux) GitHUb (Web) GNU Emacs (Linux) gVim (Windows) MacroMates TextMate (Mac & Linux) MacVim (Mac) Microsoft Notepad (Windows) Microsoft WordPad (Windows) Vim (Linux) any other text editor",John Gruber
+nib,Interface Builder User Interface File,Apple Interface Builder (Mac) Apple Xcode (Mac),Apple
+o,Compiled Object File,GNU Compiler Collection (Mac & Linux),
+owl,OWL Source Code File,"Owl (Windows, Mac & Linux)",
+p,PASCAL Program File,Applause MATLAB PASCAL Python pickle,Niklaus Wirth
+pas,Pascal Source File,"Bare Bones BBEdit (Mac) Embarcadero Turbo Pascal (Windows) Free Pascal (Windows, Mac & Linux) Notepad++ (Windows) MacroMates TextMate (Mac) RemObjects Oxygene (Windows) Xidicone Zeus (Windows) Any Text Editor",Niklaus Wirth
+pb,PureBasic Source File,"Fantaisie Software PureBasic (Windows, Mac & Linux) Any Text Editor",Fantaisie
+pbj,Pixel Bender Bytecode File,Adobe Pixel Bender Toolkit (Windows & Mac) Adobe Flash Player (Windows & Mac),Adobe Systems
+pbxuser,Xcode Project User Data File,Apple Xcode (Mac),Apple
+pika,Pika Software Builder Project File,Pika Software Builder (Windows),Pika Software
+pl,Perl Script,"ActiveState ActivePerl (Windows, Mac & Linux) Bare Bones BBEdit (Mac) ES-Computing EditPlus (Windows) IndigoStar PerlEdit (Windows) Late Night Affrus (Mac) MacroMates TextMate (Mac) Microsoft Notepad (Windows) Perl (Windows, Mac & Linux) Strawberry Perl (Windows)",
+pwn,Pawn Source Code File,Pawno (Windows) PawnSciTE (Windows) PawnoX (Windows) SA-MP Editor (Windows) SAMPCE (Windows),ITB CompuPhase
+py,Python Script,"gedit (Linux) GNU Emacs (Linux) MacroMates TextMate (Mac) Microsoft Notepad (Windows) Notepad++ (Windows) Python Software Foundation Python (Windows, Mac & Linux) Other text editor",Python Software Foundation
+pyw,Python GUI Source File,"pythonw (Windows, Mac & Linux)",
+qpr,FoxPro Generated Query Program,Microsoft Visual FoxPro,
+rc,Resource Script,Borland C++Builder Embarcadero C++ Builder Microsoft Visual Studio,Microsoft
+resources,Visual Studio Resource File,Microsoft Visual Studio (Windows),Microsoft
+s19,Motorola S19 File Record,Metrowekrs CodeWorrior (Windows & Mac) P&E Microcomputer Systems WinIDE (Windows),Motorola
+sb,Scratch Project File,"MIT Scratch (Windows, Mac, Linux & Web) Panther (Windows) Snap! (Windows, Mac & Linux)",MIT
+sb2,Scratch 2.0 Project File,"MIT Scratch (Windows, Mac, Linux & Web) Panther (Windows) Snap! (Windows, Mac & Linux)",MIT
+sh,Bash Shell Script,"Apple Terminal (Mac) Cygwin (Windows) BNU Bash (Windows, Mac & Linux) gVIM (Windows) iTerm (Mac) MacVim (Mac) Notepad++ (Windows) Vim (Linux)",
+sln,Visual Studio Solution File,Microsoft Visual Studio 2013 (Windows) MonoDevelop (Windows & Mac) VSoft Technologies FinalBuilder (Windows),Microsoft
+sma,AMX Mod Plugin Source File,AMX Mod (Windows & Linux) AMX Mod X (Windows & Linux),n/A
+ss,SilverStripe Source Code File,"Silver Stripe (Windows, Mac & Linux)",SilverStripe
+suo,Visual Studio Solution User Options File,Microsoft Visual Studio (Windows),Microsoft
+swift,Swift Source Code File,Apple Xcode (Mac) Other text editors (Mac),Apple
+trx,Microsoft Visual Studio Test Results File,Microsoft MSTest (Windows) Microsoft Visual Studio (Windows),Microsoft
+vbp,Visual Basic Project File,Microsoft Visual Studio (Windows),Microsoft
+vbproj,Visual Studio Visual Basic Project,Microsoft Visual Studio (Windows),Microsoft
+vbx,Visual Basic Custom Control,Microsoft CodeView (Windows) Microsoft Windbg (Windows),Microsoft
+vc,Verge Source Code File,Verge (Windows),Verge
+vcxproj,Visual C++ Project,Microsoft Visual Studio (Windows),Microsoft
+wwp,WebPlus Project File,Serif WebPlus (Windows),Serif
+xap,XACT Project File,Microsoft XACT (Windows),Microsoft
+xcodeproj,Xcode Project,Apple Xcode (Mac),Apple
+xib,Interface Builder File,Apple Interface Builder (Mac),Apple
+xq,XQuery File,Altova XMLSpy (Windows) Liquid Technologies Liquid XML Studio (Windows) MacroMates TextMate (Mac) Progress Stylus Studio (Windows) SyncRO Soft oXygen XML Editor (Windows) Any Text Editor,The W3C XML Query Working Group
+xt,Xdebug Trace File,Xdebug Debug client (Windows & Linux),
+yml,YAML Document,Alexander Blach Textastic Code Editor (iOS) Apple TextEdit (Mac) MacroMates TextMate (Mac) Microsoft Notepad (Windows) Vim (Linux) Other Text Editors,
+adoc,AsciiDoc File,"Any Text Editor (Windows, Mac & Linux)",Stuart Rackham
+chm,Compiled HTML Help File,Beyond CHM Microsoft Internet Explorer Microsoft Reader Mozilla Firefox xCHM,Microsoft
+csk,Claris Works File,ClarisWorks,Apple
+doc,Microsoft Word Binary File Format,Microsoft Word (97-2010) WordPerfect AbiWord Apple Pages AppleWorks KWord Microsoft Word StarOffice IBM Lotus Symphony,Microsoft
+docm,Word Open XML Macro-Enabled Document,Microsoft Word 2007 Microsoft Word 2010 Microsoft Word 2013 OpenOffice MobiSystems OfficeSuite Pro 7,Microsoft
+docx,Microsoft Word Open XML Document,Microsoft Word 2013 Corel WordPerfect X7 Apple Pages 5.2 MobiSystems OfficeSuite Pro 7 Google Drive,Microsoft
+dot,Microsoft Word Document Template File,Microsoft Word 2013 Microsoft Works Apache OpenOffice Planamesa NeoOffice Microsoft Word Viewer,Microsoft
+dotx,Word Open XML Document Template,Microsoft Word 2013 Apache OpenOffice LibreOffice,Microsoft
+eml,E-Mail Message,"Microsoft Outlook Express, 2016 Microsoft Internet Explorer Microsoft Windows Live Mail Apple Mail Mozilla Thunderbird Mozilla SeaMonkey BitDaddys emlOpenViewFree Encryptomatic Message Viewer Lite Novell GroupWise Perion IncrediMail",Microsoft
+fdxt,Final Draft Template File,Final Draft (Windows & Mac),Final Draft
+hwp,Hanword Document,"Hancom Office (Microsoft, Linux) Planamesa NeoOffice (Mac) Hancom Office Viewer",Hancom
+log,Log File,Apple console Apple Text Edit Microsoft Notepad Microsoft Word OpenOffice Writer,
+m3u,Media Playlist File,Microsoft Windows Media Player VLC Media Player Apple iTunes Roxio Creator Nullsoft Winamp,Apple Inc.
+msg,Outlook Mail Message,Microsoft Outlook (Windows) Encryptomatic MsgViewer Pro (Windows) BitDaddys Email Open View Pro (Windows) EZ Freeware Free Opener (Windows) Kupon.BG Klammer (Mac and iOS) 45 RPM MailRaider (Mac),Microsoft
+odm,OpenDocument Master Document,OpenOffice LibreOffice,Sun Microsystems and OASIS
+odt,OpenDocument Text Document,Microsoft Office 2007 Microsoft Office 2010 OpenOffice Writer,Sun Microsystems
+oxps,OpenXPS File,"Microsoft XPS Viewer (Windows) Pagemark XpsViewer (Windows, Mac) Microsoft Word 2011, 2013 (Windows) NiXPS View (Windows, Mac)",Microsoft
+pages,Pages Document,Pages 4.0 Pages 4.1 Pages 4.2 iWork '09 Google Docs Jumpshare,Apple Inc.
+pages.zip,Pages Document,Apple Pages (Mac & iOS),Apple
+pdf,Portable Document Format,Adobe Viewer Ghostscript Ghostview Xpdf gPDF Acrobat Reader,Adobe Systems
+pmd,PageMaker Document,Adobe InDesign Adobe PageMaker,Adobe
+pub,Microsoft Publisher Document File,Microsoft Publisher,Microsoft
+rtf,Rich Text Format,AbiWord Kword Microsoft Word TextEdit WordPad,Microsoft
+shs,Shell Scrap Object File,Microsoft Word Microsoft Excel,Microsoft
+sxw,StarOffice Writer Document,StarOffice Writer OpenOffice Writer LibreOffice,Sun Microsystems
+tex,LaTeX Source Document,"BaKoMa TeX (Windows) gVim (Windows) LaTeX Editor (Windows) LyX/Mac (Mac) MacVim (Mac) proTeXt (Windows) Skim (Mac) Texmaker (Windows, Mac & Linux) TeXnicCenter (Windows) TeXShop (Mac) TeXworks (Windows, Mac & Linux)",LaTeX3 Project
+txt,Raw text file,Notepad TextEdit WordPad,Microsoft
+vmg,Nokia vMessage,Nokia phones Siemens Phones Palm devices Unicode-enabled text editor Nokia PC Suite Samsung PC Studio Text Message Editor Vertu PC Suite,Nokia
+vnt,Mobile Phone vNote File,Apple Text Editor BlockSoft MemoBlock Microsoft Notepad Microsoft Word Microsoft WordPad Notes for Sony Ericsson Samsung S Memo,Sony Ericsson
+wp5,WordPerfect 5 Document,Corel WordPerfect (Windows),Corel
+wpd,WordPerfect Document File,Corel WordPerfect OpenOffice Writer Microsoft Word,Corel
+wps,Microsoft Works Word Processor Document,Microsoft Word Microsoft Works Word Processor NeoOffice OxygenOffice Works Converter,Microsoft
+xml,Extensible Markup Language File,Microsoft Visual Studio 2013 JAPISoft EditiX Wattle XMLwriter MacroMates TextMate,World Wide Web Consortium
+xps,Microsoft XML Paper Specification File,XPSView Evince XPS Viewer MuPDF Harlequin RIP Okular STDU Viewer Xara DEsigner Pro XPS Annotator,"Microsoft, Ecma International"
+acsm,Adobe Content Server Message File,Adobe Digital Editions,Adobe
+apnx,Amazon Page Number Index File,Amazon Kindle for PC or Mac,Amazon
+azw,Amazon Kindle ebook file,Amazon Kindle Reader Kindle for iOS Kindle for Android,Amazon
+azw3,Amazon KF8 eBook File,Amazon Kindle for PC Amazon kindle for MAC,Amazon
+cbr,ComicBook RAR Archive,CDisplay ComicFlow Perfect Viewer,
+cbt,Comic Book TAR File,CDisplayEx (Windows) Smith Micro StuffIt Deluxe (Windows & Mac),
+cbz,Comic Book Zip Archive,"Calibre (Windows, Mac, Linux) Comical (Windows, Mac) Comic Book Reader (Windows) GonVisor (Windows) Icecream Ebook Reader (Windows) kaycha Komik Reader (Android) MComix (Windows, Linux) Smith Micro StuffIt Deluxe 16 (Mac) Xylasoft Comic Seer (Windows, Linux)",
+epub,Electronic Publication,Mobipocket Reader Desktop Adobe Digital Editions Sony Reader Apple iBooks Google Books,International Digital Publishing Forum (IDPF)
+fb2,FictionBook 2.0 File,Apple iBooks Calibre Cool Viewer FBReader,Fiction Book
+ibooks,Multi-Touch iBook File,Apple Books (Windows & Mac) Apple iBooks Author (Mac),Apple
+kfx,Amazon KF10 eBook File,"Amazon Kindle (Windows, Mac, Android & iOS) Calibre (Windows, Mac & Linux)",Amazon
+lit,Microsoft eBook File,Microsoft Reader,Microsoft
+lrf,Sony Portable Reader File,Sony Reader,Sony
+mbp,Mobipocket Notes File,Mobipocket Reader Desktop MBP reader,Mobipocket
+mobi,Mobipocket,Amazon Kindle Apple iBooks Mobipocket Reader Desktop,Amazon
+opf,Open Packaging Format File,"Adobe Digital Editions (Windows & MAC) Adobe InDesign CC (Windows & MAC) Calibre (Windows, MAC & Linux) KDE Okular (Windows, MAC & Linux) Geometer Plus FBReader (Windows, MAC & Linux)",IDPF
+prc,Mobipocket eBook File,Mobipocket Reader Desktop Amazon Kindle Apple iBooks,Mobipocket
+tcr,Psion Series 3 eBook File,"Calibre (Windows, Mac 6 Linux)",Psion Teklogix
+vbk,VitalSource eBook,"VitalSource Bookshelf (Windows, Mac, iOS, Android)",Vital Source Technologies
+air,Adobe AIR Installation Package,"Adobe Air (Windows, Mac & Linux) Adobe Flash (Windows & Mac)",Adobe Systems
+app,Mac OS X Application,Apple OS X,Apple
+bat,DOS Batch File,Parallels Desktop (Mac) Microsoft Windows (Windows) Microsoft Windows Command Prompts (Windows) Any Text Editor,Microsoft
+cgi,Common Gateway Interface Script,"Bare Bones BBEdit (Mac) gVim (Windows) MacroMates TextMate (Mac) Microsoft Notepad (Windows) Richardson EditRocket (Windows, Linux & Mac) Other Text Editors",
+cmd,Windows Command File,Microsoft Notepad (Windows) Microsoft Windows (Windows) Microsoft WordPad (Windows) Notepad++ (Windows) Parallels Desktop for Mac (Mac) Other Text Editors,Microsoft
+com,DOS Command File,Microsoft Windows (Windows) Parallels Desktop (Mac),Microsoft
+ds,DAZ Studio 1/2 Script,DAZ 3D DAZ Studio (Windows & Mac),DAZ Productions
+exe,Windows Executable File,DOS OS/2 Windows,DOS
+gadget,Windows Gadget,Microsoft Windows (Windows),Microsoft
+ipa,iOS Application,Apple iTunes,Apple
+pif,Program Information File,Microsoft Windows,
+scr,Script File,Autodesk AutoCAD 2016 Common text editors and the respective program that created the file.,
+vb,Visual Basic Project Item File,"Adobe Dreamweaver (Windows & Mac) Microsoft Visual Studio (Windows) Microsoft WScript (Windows) Any text editor (Windows, Mac & Linux)",Microsoft
+wsf,Windows Script File,Microsoft CScript Microsoft Visual Studio Microsoft WScript Any text editor,Microsoft
+8bi,Photoshop Plug-in,Adobe Photoshop (Windows & Mac) Adobe Photoshop Elements (Windows & Mac) Corel PaintShop Pro (Windows),
+approj,ActivePresenter Project File,ActivePresenter (Windows),"Atomi Systems, Inc."
+bak,"Firefox Bookmarks Backup, Backup File",Depends upon the program being backed up.,
+bbl,BibTeX Generated Bibliography File,"Bib2x (Windows) BibDesk (Mac) MiKTeX (Windows) proTeXt (Windows) TeX Live (Linux) TeXworks (Windows, Mac & Linux)",Oren Patashnik
+bfc,Windows Briefcase File,Microsoft Windows Briefcase Windows Explorer,
+bib,BibTeX Bibliography Database,"Bib2x (Windows & Linux) BibDesk (Mac) JabRef (Windows, Mac & Linux) MacroMates TextMate (Mac) MiKTeX (Windows) Pybliographer (Linux) RefTeX (Linux) TeXnicCenter (Windows) TeXworks (Windows & Mac)",
+bibtex,BibTeX Bibliography Database File,"Bib2x (Windows & Linux) BibDesk (Mac) JabRef (Windows, Mac & Linux) MacroMates TextMate (Mac) MiKTeX (Windows) Pybliographer (Linux) RefTeX (Linux) TeXnicCenter (Windows)",
+cff,Citation File Format,,Github
+cmf,Cal3D Binary Mesh File,Cal3D (Linux) Cal3d2ogre (Windows) Cal3dViewer (Windows) Short Fuze Limited Moviestorm (Windows & Mac),Cal3D
+crdownload,Chrome Partially Downloaded File,Google Chrome,Google
+cue,Cue Sheet File,Alcohol 120% Burn CDRWIN Corel WinDVD 11 EZB Systems UltraISO Foobar2000 Lightning UK! ImgBurn Nero 2015 NTI Dragon Burn 4 Roxio Creator NXT Pro 3 Roxio Toast 14 SQIANG Easy Cue Editor Smart Projects IsoBuster VideoLAN VLC media player Any text editor,Golden Hawk Technology
+dao,Disk at Once CD/DVD Image,Iopshop Duplicator (Windows) Smart Projects IsoBuster (Windows) EZB Systems UltraISO (Windows),
+dbx,Outlook Express E-mail Folder,Microsoft Outlook Express Microsoft Windows Mail Microsoft Windows Live Mail Remo Recover Outlook Express OE-Mail Recovery DBXtract Stellar DBX to PST Converter,Microsoft
+dem,Video Game Demo File,Epic Game Unreal Tournament (Windows & Mac) id Software Hexen 2 (Windows) id Software Quake (Windows & Mac) Valve Counter-Strike (Windows & Mac) VirtualDub (Windows),Valve
+dic,Dictionary File,"ACD Systems Canvas (Windows) Apache OpenOffice (Windows, Mac & Linux) IBM Lotus Notes (Windows) JGsoft EditPad Pro (Windows) Kingsoft Writer (Windows) LibreOffice (Windows, Mac & Linux) Microsoft Windows (Windows) Microsoft Word (Windows & Mac)",
+dmg,Mac OS X Disk Image,Power Archiver 7-zip Iso Bit Zipper,Apple INC.
+enc,Encoded File,original program that encoded the file (Windows & Mac),
+enl,EndNote Library File,Thomas Reuters EndNote (Windows & Mac),Thomas Reuters
+ens,EndNote Style File,Thomas Reuters EndNote (Windows & Mac),Thomas Reuters
+enw,EndNote Import File,Thomas Reuters EndNote (Windows & Mac),Thomas Reuters
+epc,Game Data File,BBC Doctor Who: The Adventure Games (Windows & Mac),BBC
+flt,Adobe Audition Filter,Adobe Audition (Windows),Adobe Systems
+fnt,Windows Font File,"FontForge (windows, Mac & Linux) Microsoft Windows (Windows) VSoft FontEdit (Windows)",
+fon,Generic Font File,Microsoft Windows Font Viewer (Windows),
+gam,Saved Game File,Various Video Games,
+gho,Norton Ghost Backup File,Symantec Ghost Solution Suite (Windows),Symantec
+gpx,GPS Exchange File,"Apple Xcode (Mac) Fugawi Global Navigator (Windows) Garmin MapSource (Windows) Google Earth (Windows & Mac) GottenGeography (Linux) GPS Utility (Windows) GPSRouteX (Mac) GPX Viewer (Linux) JOSM (Linux) Merkaartor (Windows, Mac & Linux) Microsoft Streets & Tips (Windows) Safe Software FME Desktop (Windows) TatukGIS Viewer (Windows) TopoGrafix EasyGPS (Windows)",
+grp,StarCraft Graphics Group File,Blizzard StarCraft,Blizzard
+hex,Hexadecimal Source File,Cygnus Hex Editor (Windows) Heaventools FlexHex (Windows) Hex Workshop Hex Editor (Windows) HHD Hex Editor (Windows),
+hqx,BinHex 4.0 Encoded File,Apple Archive Utility Corel WinZip 18.5 ESTsoft ALZip Incredible Bee Archiver Smith Micro StuffIt Deluxe,Yves Lempereur
+ics,iCalendar File,Microsoft Outlook 2013 Mozilla Sunbird Microsoft Works,Internet Engineering Task Force Calendaring and Scheduling Working Group
+idx,Movie Subtitle File,"CyberLink PowerDVD 15 (Windows) DVDSubEdit (Windows) J2 Interactive MX Player (Android) MPlayer (Mac) SMPlayer (Linnux) URUWorks Subtitle Workshop (Windows) VideoLAN VLC media player (Windows, Mac & Linux)",
+img,Disk Image File,Apple Disk Utility Roxio Toast 12 SlySoft CloneCD,Apple
+iso,Disc Image File,"7-Zip (Windows) Alcohol 120% (Windows) Apple Disk Utility (Mac) Brasero (Linux) Canonical Furius ISO Mount (Linux) Corel WinZip (Windows) dd (Linux) DT Soft DAEMON Tools (Windows) ISO Master (Windows & Linux) K3b (Linux) LSoft Technologies Active@ ISO Burner (Windows) MagicISO MagicDist (Windows) NeoSmart Technologies EasyBCD (Windows) Nero (Windows) Parallels Desktop (Mac) PowerIso (Windows) RARLAB RAR (Android) Roxio Creator NXT Pro (Windows) Roxio Toast (Mac) SlySoft Virtual CloneDrive (Windows) VideoLAN VLC media player (Windows, Mac & Linux) VMware Fusion (Mac) WinRAR (Windows)",
+jad,Java Application Descriptor File,LogoManager MobiMB Mobile Media Browser (Windows) JADMaker (Windows),Oracle
+kml,Keyhole Markup Language File,"Blender (Windows, Mac & Linux) Blue Marble Geographics Global Mapper (Windows) ESRI ArcGIS for Desktop (Windows) Google Earth (Windows, Mac & Linux) Google Maps (Web) Merkaartor (Windows, Mac & Linux) Keyhole PRO (Windows & Mac)",
+kmz,Keyhole Markup Language (Zipped),Google Earth Google Maps Trimble SketchUp Global Mapper ESRI ArcGIS for Desktop,"Keyhole, Inc., Google"
+map,Quake Engine Map File,Valve Hammer Editor (Windows) Torque Constructor (Windows) id Software GtkRadiant (Windows) QuArK (Windows) MAP3BSPC (Windows) Q3Map2 (Windows) Microsoft Notepad (Windows) Other Text Editors,id Software
+marc,Machine Readable Cataloging File,MARC 21 UNIMARC,Henriette Avram
+mdf,Media Disc Image File,Alcohol 120% CyberLink PowerDVD 15 DT Soft DAEMON Tools H+H Software Virtual CD MagicISO PowerISO Smart Projects IsoBuster WinMount International WinMount,Alcohol Software
+mim,Multi-Purpose Internet Mail Message File,Apple Mail (Mac) Corel WinZip (Windows) KMail (Linux) Microsoft Outlook (Windows & Mac) Microsoft Outlook Express (Windows) Mozilla Thunderbird (Windows & Mac) Smith Micro StuffIt Deluxe (Windows & Mac),Internet Engineering Task Force
+mime,Multi-Purpose Internet Mail Extension,Apple Mail (Mac) Corel WinZip (Windows) Kmail (Linux) Microsoft Outlook (Windows) Microsoft Outlook Express (Windows & Mac) Mozilla Thunderbird (Windows & Mac) Smith Micro Stuffit (Windows & Mac),The Internet Engineering Task Force
+mrc,Machine Readable Cataloging File,MARC 21 UNIMARC,Henriette Avram
+msi,Windows Installer Package,7-Zip Microsoft Windows Installer,Microsoft
+mtb,MINITAB Exec File,Minitab (Windows),Minitab
+nes,Nintendo (NES) ROM File,"FCEUX (Windows, Mac & Linux) iNES (Windows) Jnes (Windows) MESS (Windows, Mac & Linux) Nesoid (Android) NesterJ (Windows) Nestopia (Windows, Mac & Linux) VirualNES (Windows)",
+ori,Original File,Program that created the file (Windows & Mac),
+otf,OpenType Font,"AMP Font Viewer (Windows) Apple Font Book (MAC) FontForge (Windows, MAC & Linux) Microsoft Windows Font Viewer (Windows)",Adobe & Microsoft
+part,Partially Downloaded File,DrSiriUs eMule Plus FlashGet Free Download Manager JDownloader Headlight Go!Zilla Mozilla Firefox Skype,
+pes,Brother Embroidery Format,Designer's Gallery Studio Plus Embroidermodder BALARAD Embird Studio Buzz Tools S & S Computing SewWhat!,
+plugin,Mac OS X Plug-in,Apple QuickTime Player (Mac) Apple Safari (Mac) Mozilla Firefox (Mac),
+ps,Adobe PostScript File,"ACD Systems ACDSee (Windows) ACD Systems Canvas (Windows) Adobe Acrobat (Windows & Mac) Adobe Illustrator (Windows & Mac) Adobe Photoshop (Windows & Mac) Adobe Photoshop Elements (Windows & Mac) Evince (Linux) GPL Ghostscript (Windows) GSView (Windows & Linux) Inkscape (Windows, Mac & Linux)",Adobe Systems
+qxp,QuarkXPress Project File,Adobe InDesign (Windows & Mac) QuarkXPress (Windows & Mac),Quark Software
+rem,BlackBerry Encrypted Data File,Research In Motion BlackBerry Desktop Manager,Research In Motion
+ris,Research Information Systems Citation File,"BibDesk (Mac) Thomas Reuters EndNote (Windows & Mac) Wandora (Windows, Mac & Linux)",Research Information Systems
+rom,N64 Game ROM File,1964 (Windows) Daedalus (Windows) Mupen64Plus (Windows & Mac) Nemu64 (Windows) Project64 (Windows) sixtyforce (Mac) SupraHLE (Windows) UltraHLE (Windows) UltraHLE 2064 (Windows),
+sav,Saved Game,Original program,
+t65,PageMaker Template File,Adobe PageMaker (Windows & Mac) Adobe InDesign (Windows & Mac),Adobe Systems
+tec,TECkit Compiled Mapping File,pyTecKit TECkit,SIL International
+tmp,Temporary File,Apple Safari Microsoft Word 2013 Microsoft Internet Explorer Mozilla Firefox,
+toast,Toast Disc Image,Roxio Popcorn (Mac) Roxio Toast (Mac),Roxio
+torrent,BitTorrent File,BitTorrent uTorrent Vuze BitComet FlashGet Shareaza Headlight GetRight BitLord Ares Deluge Opera,"BitTorrent, Inc."
+ttf,TrueType Font,"CorelDRAW Graphics Suite X7 (Windows) Fontforge (Windows, Mac, Linux) Microsoft Windows Font Viewer (Windows) Apple Font Book (Mac)",Apple
+url,Internet shortcut file,Apple Safari Google Chrome Microsoft Internet Explorer Microsoft Word Mozilla Firefox Notepad Opera,
+uue,Uuencoded File,Apple Archive Utility (Mac) Corel WinZip (Windows) Smith Micro StuffIt (Windows & Mac) uudecode (Linux) uuencode (Linux),
+vcd,Virtual CD,H+H Software Virtual CD (Windows) MPlayer (Mac) Roxio Creator NXT (Windows) Roxio Popcorn (Mac) Roxio Toast (Mac) WinMount International WinMount (Windows),H+H
+xll,Excel Add-In File,Microsoft Excel (Windows & Mac),Microsoft
+caj,Chinese Academic Journal File,"CNKI CAJViewer (Windows, Mac, Web & Android) CNKI CAJViewer HD 1 (iOS)",China National Knowledge Infrastructure
+dtp,Publish-iT Document,Poster Software Publish-iT (Windows),Poster
+eddx,Edraw XML File,"EdrawSoft Edraw Max (Windows, Mac & Linux) EdrawSoft Network Diagram Maker (Windows & Mac)",EdrawSoft
+indd,Adobe InDesign Document,Adobe InCopy (Windows & Mac) Adobe InDesign (Windows & Mac) Stellar Phoenix InDesign Repair (Mac) QuarkXPress with ID2Q XTension (Windows & Mac),Adobe Systems
+lbl,Now Contact Label Template,Now Contact (Windows & Mac),Now Software
+mdi,Microsoft Document Imaging File,"Microsoft Office XP, 2003, 2007 (Windows) Bugysoft MDI2PDF Converter (Windows)",Microsoft
+p65,PageMaker 6.5 Document,Adobe InDesign (Windows & Mac),Adobe Systems
+qxd,QuarkXPress Document,Adobe InDesign (Windows & Mac) QuarkXPress (Windows & Mac),Quark Software
+rels,Open Office XML Relationships File,Microsoft Excel (Windows & Mac) Microsoft PowerPoint (Windows & Mac) Microsoft Word (Windows & Mac),Microsoft
+flipchart,ActivInspire Flipchart File,"Promethean ActivInspire (Windows, Mac & Linux)",Promethean
+key,Keynote Presentation,File Viewer Lite (Windows) Apple Keynote 6.2 (Mac) Apple Keynote (iOS),Apple
+key.zip,Keynote Presentation,Apple iWork (Mac & iOS) Apple Keynote (Mac & iOS) Apple Preview (Mac),Apple
+odp,OpenDocument Presentation File,Corel WordPerfect OpenOffice Impress KOffice Lotus Symphony StarOffice NeoOffice,"Sun Microsystems, Oasis"
+pps,PowerPoint Slide Show,Apple Keynote Microsoft PowerPoint Microsoft PowerPoint Viewer OpenOffice,Microsoft
+ppsx,PowerPoint Open XML Slide Show,Apple Keynote Microsoft PowerPoint OpenOffice,Microsoft
+ppt,Microsoft PowerPoint Presentation File,Apple Keynote LibreOffice Microsoft PowerPoint OpenOffice,Microsoft
+pptm,PowerPoint Open XML Macro-Enabled Presentation,Microsoft PowerPoint 2013 Corel Presentations X7,Microsoft
+pptx,Microsoft PowerPoint 2007 XML Presentation,Apple Keynote Microsoft PowerPoint OpenOffice,Microsoft
+art,AOL Compressed Image File,ACD Systems ACDSee 18 AOL,AOL
+arw,Sony Digital Camera Alpha Raw Image Format,ARW Viewer Adobe Suite Microsoft Windows Live Photo Gallery Microsoft Windows Photos,Sony
+avif,AV1 Image File Format,Microsoft Paint Paint.net VLC Windows File Explorer some web browsers,The Alliance for Open Media (AOMedia)
+bmp,Microsoft Windows bitmap,Adobe Photoshop MS Paint Microsoft Photo Editor Paintbrush,Microsoft
+cr2,Canon Digital Camera Raw Image File,Adobe Photoshop Adobe Photoshop Lightroom Paint Shop Pro Picasa digiKam,Canon Inc.
+crw,Canon Digital Camera Raw Image Format,Adobe Photoshop Aperture AZImage ExifTool Adobe Lightroom Picasa dcraw jrawio libraw RawTherapee BreezeBrowser,"Canon, CIFF forum"
+dcm,Digital Imaging and Communications in Medicine Image File,Adobe Photoshop CC ACD Systems Canvas 15 DicomWorks ezDICOM MRIcro IrfanView OsiriX Imaging Software MeVisLab MRIcro ImageMagick GIMP,NEMA
+dds,Microsoft DirectDraw Surface,Adobe Photoshop with NVIDIA DDS plugin Gimp with DDS plugin Microsoft DirectX Texture Editor NVIDIA Texture Tools Windows Texture Viewer,Microsoft
+djvu,DjVu image files,DjVuLibre DjView MacDjView Desktop Viewer WinDjView LizardTech Browser Plug In,AT&T Labs
+dng,Digital Negative Image File,ACD Systems Canvas ACD Systems ACDSee Adobe Photoshop Adobe Photoshop Elements Adobe Photoshop Lightroom Apple Aperture Apple Preview Apple iPhoto CyberLink PhotoDirector File Viewer Lite Google Picasa MacPhun ColorStrokes Microsoft Windows Photos Serif PhotoPlus,ADOBE
+exr,OpenEXR Image,"Adobe After Effects (plugin needed, Windows & Mac) Adobe Photoshop (plugin needed, Windows & Mac) Adobe SpeedGrade (Windows & Mac) MacPhun ColorStrokes (Mac) Serif PhotoPlus (Windows)",Industrial Light & Magic
+flif,Free Lossless Image Format File,"ImageMagick (Windows, Mac & Linux) XnView (Windows)",
+fpx,FlashPix Bitmap Image File,Kodak Picture Easy Software CoralDRAW Graphics Suite X7 Coral PaintShop Pro X6 Microsoft PhotoDraw,Kodak
+gif,CompuServe Graphics Interchange Format,Adobe Photoshop Microsoft Windows Photo Gallery Viewer Apple Preview Corel Paint Shop Pro,CompuServe
+hdr,High Dynamic Range Image File,ACD Systems ACDSee (Windows) ACD Systems Canvas (Windows) Adobe Photoshop (Windows & Mac) File Viewer (Android) HDRSoft Photomatix (Windows & Mac) Lemkesoft GraphicConverter (Mac),HDRsoft
+heic,High Efficiency Image Format,"Apple iOS (iOS) Apple Photos (Mac) Dropbox (Windows, Mac, Linux, iOS, Android)",Moving Pictures Experts Group
+ico,Microsoft icon file,Adobe Photoshop Microsoft Paint Windows Picture and Fax Viewer,Microsoft
+ithmb,iPod and iPhone Photo Thumbnails File,DigiDNA iMazing Tansee iPod Transfer Photo Tansee iPhone Transfer Photo CompuClever Ultra File Opener Mac OS X LogoMac DigiDNA iMazing Echo One File Juicer Keith's iPod Photo Reader,Apple Inc.
+jp2,JPEG 2000 Core Image File,ACD Systems Canvas 15 Adobe Photoshop CC CorelDRAW Graphics Suite X7 ACD Systems ACDSee 17 Corel PaintShop Pro X6 Adobe Photoshop Elements 12 Apple Safari Apple Preview Lemkesoft Graphic Converter,Joint Photographic Experts Group
+jpeg,Joint Photographic Experts Group JFIF format,Adobe Photoshop Corel Paint Shop Pro Apple Preview Microsoft Windows Photo Gallery Viewer,The JPEG Committee
+jpg,Joint Photographic Experts Group JFIF format,Adobe Photoshop Adobe Suite Apple Preview Corel Paint Shop Pro Microsoft Office Microsoft Windows Photo Gallery Viewer Most web browsers,Joint Photographic Experts Group
+jxr,JPEG XR Image,"Adobe Photoshop with plugin (Windows) Axel Rietschin FastPictureViewer (Windows) IrfanView (Windows) Microsoft Windows Photo Viewer (Windows) XnView MP (Windows, Mac & Linux)",Microsoft
+kdc,Kodak Photo-Enhancer File,ACD Systems ACDSee 18 ACD Systems Canvas 15 Adobe Photoshop CC 2015 Adobe Photoshop Elements 13 Adobe Photoshop Lightroom CC 2015 Corel PaintShop Pro X8 fCoder Group Image Converter Plus Google Picasa Kodak Picture Transfer Microsoft Windows Photos NCH Pixillion,Kodak
+mac,MacPaint Image,Apple MacPaint (Mac) Apple QuickTime Player (Mac) CorelDRAW Graphics Suite (Windows) Corel PaintShop Pro (Windows) Corel Presentations (Windows) Lemkesoft GraphicConverter (Mac),Apple
+nef,Nikon Digital Camera Raw Image File,Adobe Photoshop Adobe Photoshop Lightroom digiKam Paint Shop Pro Picasa,Nikon Inc.
+nrw,Nikon Digital SLR Camera Raw Image File,Adobe Photoshop Elements 13 Adobe Photoshop CC 2015 Nikon ViewNX Nikon Capture NX Corel PaintShop Pro X8 Google Picasa Microsoft Windows Photo Gallery MacPhun ColorStrokes,Nikon Corporation
+orf,Olympus Digital Camera Raw Image File,Olympus Master Adobe Photoshop CC Corel PaintShop Pro X6 ACD Systems Canvas 15 Google Picasa,Olympus
+pcd,Photo CD,ACD Systems Canvas 15 Corel PaintShop Pro X6 Apache OpenOffice Corel WordPerfect Office X7 ACD Systems ACDSee 17,Kodak
+pct,Apple Macintosh QuickDraw Image,ACD Systems ACDSee 17 Adobe After Effects CC 2015 Adobe Fireworks CC Adobe Illustrator CC Adobe Photoshop CC Adobe Photoshop Elements 12 CorelDRAW Graphics Suite X7 Corel PaintShop Pro X8 XnViewMP,Apple
+pcx,ZSoft Paintbrush Bitmap Image File,Adobe Photoshop CC Core PaintShop Pro X6 Corel Presentations X7 Microsoft Windows Picture and Fax Viewer,ZSoft
+pef,Pentax Electronic File,ACD System ACDSee 18 ACD Systems Canvas 15 Adobe Photoshop CC Adobe Photoshop Elements 13 Corel PaintShop Pro X6 File Viewer for Android Google Picasa MacPhun ColorStrokes MAGIX Xara Photo & Graphic Designer 9 Pentax Photo Browser or Photo Laboratory UFRaw,Pentax
+pgm,Portable Gray Map Image,ACD Systems ACDSee 18 ACD System Canvas 15 Adobe Photoshop with plug-in Corel PaintShop Pro X8 GIMP Inkscape Netpbm,Jef Poskanzer
+pict,Apple Macintosh QuickDraw/picture file,ACD Systems Canvas 15 ACD Systems ACDSee 17 Adobe Photoshop CC Adobe Photoshop Elements 12 Adobe Fireworks CCExternal Link Adobe After Effects CC CocoModX CorelDRAW Graphics Suite X7 Corel PaintShop Pro X7 Lemkesoft GraphicConverter Planamesa NeoOffice,Apple
+pictclipping,Picture Clipping File,ACDSee Photo Manager (Windows) Apple Finder (Mac) GraphicConverter (Mac) IrfanView (Windows) Lemkesoft GraphicConverter (Mac),Apple
+plist,,Apple Property List Editor Fat Cat PlistEdit Pro Icon Night Productions Pref Setter,Apple
+png,Portable Network Graphics,Microsoft Windows Photos Microsoft Paint Adobe Photoshop CC,PNG Development Group (donated to W3C)
+psd,Adobe Photoshop Document,Adobe Illustrator CS6 Adobe InDesign CS6 Adobe Photoshop GIMP,Adobe Systems
+pspimage,PaintShop Pro Image,"ACD Systems Canvas (Windows) Corel Painter (Windows & Mac) Corel PaintShop Pro (Windows) Corel VideoStudio Pro (Windows) CorelDRAW Graphics Suite (Windows) XnViewMP (Windows, Mac & Linux)",Corel
+raf,Fuji RAW Image File,"ACD Systems ACDSee (Windows) ACD Systems Canvas (Windows) Adobe DNG Converter (Windows & Mac) Adobe Photoshop (Windows, Mac, iOS & Android) Adobe Lightroom (Windows & Mac) Apple Photos (Mac) Corel PaintShop Pro (Windows) FastStone Image Viewer (Windows) Fuji Hyper-Utility Software (Windows & Mac) Google Picasa (Windows & Mac) Helicon Filter (Windows) MacPhun ColorStrokes (Mac) MAGIX Xara Xtreme (Windows)",Fuji
+raw,Raw Image Data File,"ACD Systems ACDSee Photo Studio (Windows) ACD Systems Canvas (Windows) Adobe Photoshop (Windows & Mac) Adobe Photoshop Elements (Windows & Mac) Apple Previews (Mac) Corel PaintShop Pro (Windows) digiKam (Linux) GIMP (Windows, Mac & Linux) File Viewer Plus (Windows) MacPhun ColorStrokes (Mac) Microsoft Photos (Windows) RawTherapee (Windows & Linux) UFRaw (Linux) WidsMob PhotoVault (Mac)",
+rwl,Leica RAW Image,"ACD Systems ACDSee (Windows) Adobe Photoshop (Windows, Mac, iOS & Android) Adobe Lightroom (Windows & Mac) CyberLink PhotoDirector (Windows) MacPhun ColorStrokes (Mac) Microsoft Windows Photos (Windows) Phase One Capture One (Windows & Mac)",Leica
+sfw,Seattle FilmWorks image,SFW2JPG XnViewMP SFW PhotoWorks American Greetings SFW & PWP File Converter,Seattle Filmworks
+sr2,Sony RAW Image File Format,"Adobe DNG Converter (Windows & Mac) Corel AfterShot (Windows, Mac & Linux) CyberLink PhotoDirector (Windows & Mac) EZ Freeware Free Opener (Windows) File Viewer for Android (Android) File Viewer Plus (Windows) MacPhun ColorStrokes (Mac) Microsoft Windows Live Photo Gallery (Windows) Microsoft Windows Photos (Windows) XnViewMP (Windows, Mac & Linux)",Sony
+tga,Truevision Targa Graphic File,Adobe Photoshop Corel Paint Shop Pro GIMP Painter,Truevision
+thm,Video Thumbnail File,Adobe Photoshop CC (Windows) Microsoft Windows Photo Viewer (Windows) Sony Picture Motion Browser (Windows) Microsoft Paint (Windows) Canon ZoomBrowser EX (Windows) Apple Preview (Mac) Adobe Photoshop CC (Mac) ACDSee Photo Manager 2009,Open Office
+tif,Tagged Image File Format,Microsoft Windows Photos Microsoft Windows Photo Viewer Corel PaintShop Pro X6 Adobe Photoshop CC Roxio Creator NXT Pro 2,"Aldus, now Adobe Systems"
+tiff,Tagged Image File Format,Microsoft Windows Photos (Windows) Microsoft Windows Photo Viewer (Windows) Apple Preview (Mac) CorelDRAW Graphics Suite (Windows) Adobe Photoshop (Windows & Mac) Adobe Photoshop Elements (Windows & Mac) Adobe Illustrator (Windows & Mac) ACD Systems ACDSee (Windows) MacPhun ColorStrokes (Mac) Nuance PaperPort (Windows) Nuance OmniPage Ultimate (Windows) Roxio Toast (Mac) Other image viewers,"Aldus, Adobe Systems"
+wbmp,Wireless Bitmap Image File,"ACD Systems ACDSee (Windows) ACD Systems Canvas (Windows) Adobe Photoshop (Windows & Mac) Adobe Photoshop Elements (Windows & MAc) Corel PaintShop (Windows) File Viewer (Android) Inkscape (Windows, Mac & Linux)",
+webp,Google Web Picture files,Adobe Photoshop Google Chrome Picasa,Google
+xcf,eXperimental Computing Facility,GNU Image Manipulation Program (GIMP) CorelDRAW Graphics Suite X7 CinePaint Seashore KolourPint,GIMP
+yuv,YUV Encoded Image File,"Datahammer 7yuv YUV Viewer (Windows) Elecard YUV Viewer (Windows) ImageMagick (Windows) XnViewMP (Windows, Mac & Linux)",n/A
+act,Adobe Color Table File,Adobe Illustrator CC 2015 Adobe Photoshop CC 2015,Adobe Systems
+api,Adobe Photoshop Inks File,Adobe Photoshop (Windows & Mac),Adobe Systems
+asw,ACDSee Slideshow Wizard File,ACD Systems ACDSee Photo Studio (Windows),ACD Systems
+cdt,CorelDRAW Image Template,"ACD Systems Canvas (Windows) CorelDRAW Graphics Suite (Windows) Corel Presentations (Windows) Inkscape (Windows, Mac & Linux) sK1 (Linux) UniConvertor (Linux)",Corel
+cfg,Configuration File,Apple TextEdit (Mac) MacroMates TextMate (Mac) MacVim (Mac) Microsoft Notepad (Windows) Microsoft WordPad (Windows) Notepad2 (Windows) Other Text Editors,
+dun,Dial Up Network File,Microsoft Dial-Up Networking (Windows),Microsoft
+fm3,Lotus 1-2-3 Spreadsheet Format File,IBM Collaboration Solutions (Windows) Microsoft Excel (Windows),IBM
+gid,Windows Help Global Index File,Microsoft Windows Help,Microsoft
+ht,HyperTerminal Session File,Hilgraeve HyperTerminal (Windows),Hilgraeve
+icm,Image Color Matching Profile,Adobe Photoshop (Windows & Mac) Apple ColorSync Utility (Mac) Cerious ThumbsPlus (Windows) CorelDRAW Graphics Suite (Windows) Microsoft Color Control Panel (Windows) Microsoft RAW Image Thumbnailer (Windows),
+inf,Setup Information File,Microsoft Windows Microsoft Notepad MacroMates TextMate,Microsoft
+ini,Windows Initialization File,Microsoft Windows Microsoft Notepad Microsoft WordPad,
+mind,MindMeister Map File,MeisterLabs MindMeister (Web),MeisterLabs
+pkg,Mac OS X Installer Package,Apple Installer CharlesSoft Pacifist,Apple
+prf,Outlook Profile File,Microsoft Outlook (Windows & Mac),Microsoft
+rdf,Resource Description Framework File,"Altova XMLSpy (Windows) Liquid Technologies Liquid XML Studio (Windows) Mozilla Firefox (Windows, Mac & Linux) Mozilla SeaMonkey (Windows, Mac & Linux) SyncRO Soft oXygen XML Editor (Windows, Mac & Linux)",
+tscproj,TechSmith Camtasia Project File,TechSmith Camtasia (Windows & Mac),TechSmith
+csv,Comma Separated Values File,Microsoft Excel Microsoft Works Corel Quattro Pro Apache OpenOffice LibreOffice Microsoft Notepad Libre Office MobiSystems OfficeSuite Pro 7,Microsoft
+numbers,Numbers Spreadsheet File,"Apple Numbers (Mac, Web & iOS)",Apple
+ods,OpenDocument Spreadsheet,Microsoft Office 2007 Microsoft Office 2010 OpenOffice Calc,Sun Microsystems
+wk3,Lotus 3 Worksheet,IBM Collaboration Solutions Microsoft Excel (older than 2007),IBM
+wks,Lotus 1-2-3 Spreadsheet,"Apache OpenOffice (Windows, Mac & Linux) Corel Quattro (Windows) Gnumeric (Windows & Linux) IBM Collaboration Solutions (Windows) Microsoft Excel (Windows & Mac) Planamesa NeoOffice (Mac)",IBM
+xlr,Microsoft Works spreadsheet or chart,Microsoft Excel 2016 Microsoft Works,Microsoft
+xls,Microsoft Excel Spreadsheet,Microsoft Excel Microsoft Excel Viewer OpenOffice,Microsoft
+xlsb,Excel Binary Spreadsheet,Apache OpenOffice Microsoft Excel Microsoft Works,Microsoft
+xlsm,Excel Open XML Macro-Enabled Spreadsheet,Corel Quattro Pro X7 Microsoft Excel 2016 MobiSystems OfficeSuite Pro,Microsoft
+xlsx,Microsoft Excel Open XML Spreadsheet,Microsoft Excel 2007 Open Office Oxygen Office Progessional (Linux),Microsoft
+ani,Windows Animated Cursor,ACD Systems ACDSee 18 Aha-Soft ArtCursor Axialis Cursor Workshop G.D.G AniTuner IcoFX Inkscape RealWorld Cursor Editor,Microsoft
+bashrc,Bash Non-Interactive Login Shell File,Apple Terminal (Mac) GNU Bash (Mac & Linux) MacroMates TextMate (Mac),The GNU Project
+bash_history,Bash History File,Apple Terminal (Mac) GNU Bash (Mac & Linux),The GNU Project
+bash_profile,Bash Interactive Login Shell File,Apple Terminal (Mac) GNU Bash (Mac & Linux) MacroMates TextMate (Mac),The GNU Project
+bin,Generic Binary File,AVG CDRWin Linux,"Windows, Macintosh"
+bud,Binary Printer Description File,Microsoft Windows,Microsoft
+cab,Windows Cabinet File,7-Zip (Windows & Mac) cabectract (Linux) Corel WinZip (Windows) Incredible Bee Archiver (Mac) IZArc (Windows) Microsoft System Configuration Utility (Windows) Microsoft Windows Installer (Windows) Smith Micro StuffIt Deluxe (Windows & Mac) The Unarchiver (Mac) WinInizio ZipGenius (Windows) WinRAR (Windows),Microsoft
+cat,Windows Catalog File,Microsoft Windows,Microsoft
+cpl,Windows Control Panel Item,Microsoft Windows,Microsoft
+cur,Windows Cursor,"ACD Systems SCDSee 18 (Windows) Axialis CursorWorkshop (Windows) Corel PaintShop Pro X8 (Windows) Greenfish Icon Editor Pro (Windows) Inkscape (Windows, Mac, Linux) Microsoft Windows Snap Converter (Mac)",
+dat,Data File,Notepad Outlook Microsoft Word PDF Reader,Microsoft
+deskthemepack,Windows 8 Desktop Theme Pack File,Microsoft Windows Personalization Control Panel,Microsoft
+dev,Windows Device Driver File,Microsoft Windows (Windows) Parallels Desktop (Mac),
+dit,Active Directory Information Tree File,Microsoft Active Directory (Windows),Microsoft
+dll,Dynamic Link Library,DLL-Files Fixer Microsoft Windows Microsoft Visual Studio 2013 Microsoft Visual FoxPro Resource Hacker,Microsoft
+dmp,Windows Memory Dump,Microsoft Dumpflop utility Microsoft Visual Studio 2013 Windows Debug Tools Windows Kernel Debug,Microsoft
+drv,Device Driver,Microsoft Windows,
+dvd,DOS Device Driver,Microsoft MS-DOS,
+ebd,Windows EBD System File,Windows Operating System,Microsoft
+ffl,Find Fast Document List,Microsoft Office (Windows) Microsoft Outlook (Windows),Microsoft
+ffo,Find Fast Document Properties Cache,Microsoft Office (Windows) Microsoft Outlook (Windows),Microsoft
+fota,Firmware Over-the-Air File,Android Operating System,Google
+hdmp,Windows Heap Dump File,Microsoft Visual Studio (Windows),Microsoft
+hiv,Windows Registry Hive File,Microsoft Reg (Windows),Microsoft
+hlp,Windows Help File,Adobe RoboHelp (Windows & Mac) Help Explorer Viewer (Windows & Linux) Microsoft Windows Help Viewer (Windows) Microsoft Help Workshop (Windows) YpgSoft Windows HLP To RTF (Windows),Microsoft
+htt,Hypertext Template File,Windows OS,Microsoft
+icl,Windows Icon Library File,ACD Systems Canvas (Windows) Aha-Soft IconUtils (Windows) Axialis IconWorkshop (Windows) Impact Microangelo Toolset (Windows) Microsoft Windows (Windows),Microsoft
+icns,Mac OS X Icon Resource File,"Adobe Photoshop with IconBuilder for Mac Plugin (Mac) Apple Preview (Mac) Axialis IconWorkshop (Windows) Folder Icon X (Mac) Icon Machine (Mac) Iconographer (Mac) Inkscape (Windows, Mac & Linux) Snap Converter (Mac) XnViewMP (Windows, Mac & Linux)",Apple
+iconpackage,IconPackage Theme File,Stardock IconPackager (Windows),Stardock
+ion,File Description File,4DOS (Windows) Microsoft Notepad (Windows) XnView (Windows) Any other text editor,
+iptheme,IconPackage Raw Theme File,Stardock IconPackage (Windows),Stardock
+lnk,Windows File Shortcut,Microsoft Windows Flint Link Info,Microsoft Corporation
+mdmp,Windows Minidump File,Microsoft Windows SDK (Windows) Microsot Visual Studio (Windows) Microsoft WinDdg (Windows),Microsoft
+mlc,Microsoft Language Interface Pack,Windows Operating System,Microsoft
+nb0,Device Boot Loader Image,Microsoft Windows CE Device Emulator (Windows) Software Update Tool LR (Windows),
+nfo,System Information File,DIZzy GetDiz Microsoft Notepad Microsoft System Information NFOPad,Microsoft
+nt,Windows NT Startup File,Microsoft Windows,Microsoft
+pck,System Center Configuration Manager,Microsoft System Center Configuration Manager (Windows),Microsoft
+pnf,Precompiled INF File,Various applications (Windows),
+pol,Windows Policy File,Microsoft Group Policy Object Editor (Windows) Registry.Pol Viewer Utility (Windows),Microsoft
+prop,Android Build Properties File,ES File Explorer File Manager JRummy Apps Build Prop Editor JRummy Apps Root Browser Speed Software Root Explorer,Android
+qvm,Q Virtual Machine,Q (Mac),Q
+reg,Registry Data File,Microsoft Registry Editor (Windows),Microsoft
+sdt,Siemens Desktop Theme File,7-Zip (Windows) Corel WinZip (Windows),Siemens
+sys,Windows System File,Microsoft Windows Parallels Desktop for Mac,Microsoft
+ai,Adobe Illustrator File,Adobe Illustrator Corel Paint Shop Pro Adobe Reader Adobe Photoshop,Adobe
+cdr,CorelDRAW Image File,Corel PaintShop Photo Pro Corel WordPerfect Office Adobe Illustrator Adobe Reader,Corel Corporation
+cvs,Canvas 3 Drawing File,ACD Systems Canvas (Windows),ACD Systems
+emf,Microsoft Enhanced Metafile (32-bit),Microsoft Publisher Microsoft Word QuarkXPress,Microsoft
+emz,Windows Compressed Enhanced Metafile,"Microsoft Office 2013 (Windows) Microsoft Visio 2013 (Windows) Logipole Konvertor (Windows) XniViewMP (Windows, Linux, Mac OS)",Microsoft
+eps,Adobe Encapsulated PostScript File,Adobe Acrobat Adobe Illustrator Adobe InDesign Adobe Photoshop (later versions) Ghostscript GIMP (requires Ghostscript) OpenOffice,Adobe Systems
+gvdesign,Gravit Designer File,"Gravit Designer (Windows, Mac, Linux & Web) Gravit Kles (Web)",Gravit
+mix,Microsoft Image Extension,Microsoft Digital Image Pro Microsoft PhotoDraw Picture It!,Microsoft
+odg,OpenDocument Graphic File,Libre Office OpenOffice Draw,Sun Microsystems
+pd,FlexiSIGN 5 Plotter Document,SAi FlexiSIGN,SA International
+svg,Scalable Vector Graphics File,Adobe Photoshop Apple Preview Corel Paint Shop Pro Corel SVG Viewer,World Wide Web Consortium
+svgz,Compressed Scalable Vector Graphics File,"Adobe Illustrator (Windows & Mac) Adobe SVG Viewer (Windows, Mac & Linux) Autodesk Tinkercad (Windows & Web) Corel PaintShop Pro (Windows) Inkscape (Windows, Mac & Linux) Serif DrawPlus (Windows)",Adobe Systems
+vsd,Microsoft Visio Drawing File,Microsoft Visio 2013 LibreOffice CorelDRAW Graphics Suite X7,Microsoft
+wmf,Windows Metafile,ACD Systems ACDSee 17 ACD Systems Canvas Adobe Illustrator Apple QuickTie Player Corel PaintShop Pro X6 CorelDRAW Graphics Suite X7 Cristallight WMF Converter Pro GIMP IMSI TurboCAD Deluxe Inkscape Newera Graphics Converter Pro MAGIX Xara Photo & Graphic Designer Microsoft Windows Photo Viewer Microsoft Picture It!,Microsoft
+wpg,WordPerfect Graphics File,CorelDRaw Graphics Suite X7 Inkscape Corel WordPerfect X7 Lemkesoft GraphicConverter Serif PhotoPlus,Corel
+264,Ripped Video Data File,RipBot264 (Windows) Roxio Toast 14 (Mac) StaxRip (Windows),
+3g2,3rd Generation Partnership Project Multimedia File,Microsoft Media Player Classic Apple QuickTime Player GOM Player Totem VideoLAN VLC Media Player,3rd Generation Partnership Project 2
+3gp,3rd Generation Partnership Project,Adobe Flash Professional Windows Media Player QuickTime Player VLC Media Player Nokia Suite,3rd Generation Partnership Project (3GPP)
+3gpp,Third Generation Partnership Project Media File,QuickTime Player VLC Media Player Windows Media Player,3rd Generation Partnership Project (3GPP)
+aep,After Effects Project File,Adobe After Effects (Windows & Mac),Adobe Systems
+amv,Anime Music Video File,File Viewer Plus (Windows) Callum Hollywood AMV Studio (Windows) AMV Converter mod (Windows) AMV Convert Tool (Windows) AMV Marker (Windows),
+arf,WebEx Advanced Recording File,Cisco WebEx Network Recording Player (Windows & Mac),Cisco
+asf,Advanced Systems Format File,Real Player VLC Media Player Windows Media Player,Microsoft
+avi,Microsoft Audio/Visual Interleaved,Video Lan VLC Player Microsoft Windows Media Player Apple Quick Time Player DIVX Player,Microsoft
+bik,Bink Video File,"Microsoft Windows Media Player (Windows) Splayer (Windows) The Bink Video Player (Mac & Linux) The RAD Video Tools (Windows) VideoLAN VLC Media Player (Windows, Mac & Linux)",RAD Game Tools
+camproj,Camtasia Studio Project File,TechSmith Camtasia Studio (Windows),TechSmith
+camrec,Camtasia Studio Screen Recording,TechSmith Camtasia Studio (Windows),TechSmith
+ced,JVC Camera Video Data File,This file is not supposed to be opened and will need to be converted to become useful.,
+cmproj,Camtasia Project File,TechSmith Camtasia (Mac),TechSmith
+cmrec,Camtasia Screen Recording,TechSmith Camtasia (Mac),TechSmith
+cpi,AVCHD Video Clip Information File,"Adobe Premiere Pro CC (Windows, Mac) Roxio Creator NXT Pro 2 (Windows) Roxio Popcorn (Mac) CyberLink Power Director 12 Ultra (Windows) Pinnacle Studio 17.5 (Windows) Corel Videostudio Pro X7 Ultimate (Windows) Sony Vegas Pro 13 (Windows)",Sony and Panasonic
+dav,DVR365 Video File,DVR365 Player Software,DVR365
+dir,Adobe Director Movie,Adobe Director (Windows & Mac),Adobe Systems
+divx,Digital Video Express Encoded Movie Files,Video LAN VLC Media Player DivX 7 Microsoft Windows Media Player CyberLink PowerDVD 14 Roxio Creator NXT Pro 2. Roxio Toast 12 RealNetworks RealPlayer Cloud,DivX Networks Inc.
+dvsd,Digital Video File,DVMaster Pro Video Nero MediaHub Nero Vision Express,
+esp3,Easy Sketch Pro 3.0 Project File,Easy Sketch Pro (Windows & Mac),
+f4v,Flash MP4 Video File,Adobe FlashPlayer 13 Adobe Flash Professional CC VideoLAN VLC Media Player,Adobe Systerm
+flv,Animated Flash Video File,FFDShow Microsoft Windows Photo Gallery Viewer VideoLAN VLC Media Player Windows Media Player,Adobe Systems
+g64,Genetec Video File,Genetec Security Center (Windows),Genetec
+h264,H.264 Encoded Video File,"Microsoft Windows Media Player (Windows) Apple QuickTime Player (Windows, Mac) Roxio Creator NXT Pro 2 (Windows Roxio Toast 12 (Mac) Corel VideoStudio Pro X7 Ultimate (Windows) CyberLink Power DVD 14 (Windows) VideoLAN VLC media player (Windows, Mac, Linux)",
+ifo,DVD Info File,WinDVD CyberLink PowerDVD 10 Roxio Creator 2010 Nero ShowTime,
+imoviemobile,iOS iMovie Project File,Apple iMovie (Mac & iOS),Apple
+m2ts,MPEG-2 Transport Stream,Microsoft Windows Media Player VideoLAN VLC media player Adobe Flash Professional CC Sony Picture Motion Browser,Sony
+m4v,iTunes Video File,Apple QuickTime Player Apple iTunes VLC Media Player,Apple
+mepx,Movavi Video Editor Project,Movavi Screen Capture Studio (Windows) Movavi Video Editor (Windows) MOVAVI Video Suite (Windows),Movavi
+mkv,Matroska Video File,VLC Media Player,Steve Lhomme
+mod,Camcorder Recorded Video (Modul) File,Quicktime Player VLC Media Player Windows Media Player,JVC/Panasonic
+modd,Sony Video Analysis File,Sony Picture Motion Browser (Windows) Sony PlayMemories Home,Sony
+mov,QuickTime Movie,Apple QuickTime Player CyberLink PowerDirector Roxio Easy Media Creator VideoLAN VLC Media Player,Apple
+mp4,MPEG-4 Video Stream,Real Media Player WinAmp Windows Media Player iTunes VideoLAN VLC Media Player,Moving Picture Experts Group
+mpeg,Motion Picture Experts Group file interchange format,Windows Media Player Windows Movie Maker VLC Video Player Apple iTunes Quicktime Player Adobe Flash Roxio Cyberlink video editing software Xilisoft Video Converter,IOS/IEC
+mpg,MPEG Video Stream,Windows Media Player Windows Movie Maker VLC Video Player Apple iTunes Quicktime Player Adobe Flash Roxio Cyberlink video editing software Xilisoft Video Converter,IOS/IEC
+mproj,Mine-imator Project File,Mine-imator (Windows),Mine-imator
+mswmm,Microsoft Windows Movie Maker Project File,Microsoft Windows Live Movie Maker Microsoft Windows Movie Maker,Microsoft
+mts,AVCHD Video File,VideoLAN VLC Media Player Windows Media Player,"Sony, Panasonic"
+mxf,Material Exchange Format File,"Adobe Premiere Pro CC (Windows, Mac) Avid Media Composer (Windows, Mac) Sony Vegas Pro 13 (Windows) Grass Valley Edius (Windows) Avid Pro Tools (Windows, Mac) Open Cube XFReader (Windows) OpenCube XFConverter (Windows) AmberFin MXF Desktop (Windows) VideoLAN VLC media player (Windows, Mac, Linux) Apple QuickTime Player (Mac)",SMPTE
+nfv,Netflix Video File,Netflix (iOS & Android),Netflix
+ogv,Ogg Video File,VLC Miro media Player MPlayer Helix Player,Xiph.org
+osp,OpenShot Project File,OpenShot (Linux),Jonathan Thomas
+pds,PowerDirector Script File,CyberLink PowerDirector 14 Ultra CyberLink PowerProducer 6,CyberLink
+qt,Apple QuickTime Movie,"Apple QuickTime Player (Windows, Mac) Roxio Creator NXT Pro 2 (Windows) Roxio Toast 12 (Mac) CyberLink PowerDVD 14 (Windows) Adobe Flash Professional CC (Windows, Mac) Eltima Elmedia Player (Mac)",Apple
+rcproject,iMovie '08 Project File,Apple Final Cut Pro (Mac) Apple iMovie (Mac),Apple
+rm,Real Media File,RealNetworks RealPlayer,Real Networks
+rmvb,RealMedia Variable Bitrate,RealPlayer VLC Media Player,Real Networks
+srt,SubRip Text Subtitle file,MPlayer CyberLink PowerDirector 14 Ultra CyberLink PowerDVD 15 Microsoft Windows Media Player with VobSub plugin VideoLAN VLC media player Media Player Classic Aegisub Jubler olimsoft OPlayer,
+swf,Shockwave Flash Movie,Adobe Flash Player Web Browser with flash plugin,FutureWave Software
+thp,Wii/Game Cube Video File,File Viewer Plus (Windows) thpplay (Windows),
+trec,TechSmith Recording File,TechSmith Camtasia (Windows & Mac),TechSmith
+ts,Video Transport Stream File,VideoLAN VLC Media Player Corel VideoStudio Pro X7 Ultimate CyberLink PowerProducer 6 Squared 5 MPEG Streamclip Pinnacle Studio 17.5,MPEG
+tvs,TeamViewer Video Session File,"TeamViewer (Windows, Mac, Linux, iOS & Android)",TeamViewer
+veg,Vegas Pro Project,Sony Vegas Pro Sony Vegas Movie Studio Sony Foundry,Sony
+vep,AVS Video Editor Project File,Online Media Technologies AVS Video Editor,Online Media Technologies
+vob,DVD Video Object File,"Video Lan VLC Player Microsoft Windows Media Player BlazeDVD, Corel WinDVD PowerDVD 11",DVD Forum
+vpj,VideoPad Video Editor Project File,NCH VideoPad Video Editor,NCH Software
+vproj,VSDC Video Editor Project,VSDC Free Video Editor (Windows) VSDC Video Editor (Windows),Flash-Integro LLC
+vro,DVD Video Recording File,"Apple QuickTime Player (Windows & Mac) Corel WinDVD Pro (Windows) CyberLink PowerDVD (Windows) DRD Systems VideoReDo (Windows) MplayerX (Mac) Online Media Technologies AVS Video Editor (Windows) Squared 5 MPEG Streamclip (Mac) VideoLAN VLC media player (Windows, Mac & Linux)",
+webm,Web Media File,Mozilla Firefox Google Chrome Opera QuickTime YouTube Adobe Flash Skype,"On2, Xiph, and Matroska; later Google"
+wlmp,Windows Live Movie Maker Project File,Microsoft Live Movie Maker,Microsoft
+wmv,Windows Media Video,MPlayer Microsoft Windows Media Player PowerDVD RealPlayer VideoLAN VLC Media Player,Microsoft
+xesc,Expression Encoder Screen Capture File,File Viewer Plus (Windows) Microsoft Expression Encoder (Windows) Microsoft Expression Studio (Windows) VideoLAN VLC media player (Windows),Microsoft
+asp,Active Server Page,Adobe Dreamweaver (Windows & Mac) Adobe Fireworks (Windows & Mac) ES-Computing EditPlus (Windows) Microsoft IIS (Windows) Microsoft Visual Studio (Windows) Microsoft Visual Web Developer (Windows) Any Web Browser Any Text Editor,Microsoft
+aspx,Active Server Page Extended File,Microsoft Visual Web Developer Microsoft Visual Studio 2013 ES-Computing Edit Plus Any Web browser,Microsoft
+cer,Internet Security Certificate,"Adobe Acrobat DC (Windows & Mac) Adobe Reader (Windows, Mac & Linux) Apple Keychain Access (Mac) Apple Safari (Mac) Microsoft Internet Explorer (Windows) Mozilla Firefox (Windows) Other Web Browsers",
+cfm,ColdFusion Markup File,"Adobe ColdFusion (Windows, Mac & Linux) Adobe ColdFusion Builder (Windows & Mac) Adobe Dreamweaver (Windows & Mac) New Atlanta BlueDragon (Windows, Mac & Linux) Railo (Windows, Mac & Linux) Any Text Editor Any Web Browser",Adobe Systems
+cfml,ColdFusion Markup Language File,"Adobe ColdFusion (Windows, Mac & Linux) Adobe ColdFusion Builder (Windows & Mac) Adobe Dreamweaver CC (Windows & Mac) Railo (Windows, Mac & Linux) View in any web browser",Adobe Systems
+csr,Certificate Signing Request File,"Microsoft IIS (Windows) OpenSSL (Windows, Mac & Linux)",
+css,Cascading Style Sheets,Mozilla Firefox Internet Explorer Google Chrome Opera,World Wide Web Consortium
+do,Java Servlet,Apache Tomcat Any web browser,
+htm,Hypertext Markup Language File,"Opera explorer, Internet explorer, Mozilla Firefox, Microsoft Visual Studio, Any text editor, and web browsers.",W3C & WHATWG
+html,Hypertext Markup Language with a client-side image map,Internet Explorer Mozilla Firefox Google Chrome Opera Safari Other internet browsers,World Wide Web Consortium & WHATWG
+js,JavaScript File,"Adobe Dreamweaver CC (Windows, Mac) Adobe ColdFusion Builder 3 (Windows, Mac) Microsoft Visual Studio 2013 (Windows) Jetbrains IntelliJ IDEA (Windows) Es-Computing EditPlus (Windows) Apple Dashcode (Mac) Bare Bones BBEdit 10 (Mac) MacroMates TextMate (Mac) Other text editors Other web browsers",
+json,JavaScript Object Notation File,Microsoft Notepad Microsoft WordPad Notepad ++ Mozilla Firefox,
+jsp,Java Server Page,"Adobe Dreamweaver (Windows & Mac Apple Safari (Mac) Eclipse IDE for Java Developers (Windows, Mac & Linux) ES-Computing EditPlus (Windows & Linux) Google Chrome (Windows, Mac & Linux) MacroMates TextMate (Mac) Microsoft Internet Explorer (Windows) Mozilla Firefox (Windows, Mac & Linux) Progress Stylus Studio (Windows) Richardson EditRocket (Windows, Mac & Linux) Other Web Browsers",Oracle
+mhtml,MIME HTML File,"Google Chrome (Windows, Mac & Linux) Kingsoft Writer (Windows) Microsoft Internet Explorer (Windows) Microsoft Word (Wondows & Mac) Mozilla Firefox (Windows & Mac) Opera (Windows, Mac, Linux, Android & iOS) Terra Informatics BlockNote.Net (Windows) UCWeb UC Browser (Android, iOS, Windows Phone) WizBrother WizHtmlEditor (Windows)",
+nzb,NewzBin Usenet Index File,Asar NZB Drop DJI Interprises NewsBin Pro Ilan Shemes GrabIt KLibido NewsLeecher Newsman Pro NZBGet nzbperl Panic Unison 2 rsbr-Software News File Grabber S&H Computer Systems News Rover TechSono SuperNZB Usenet Explorer,NewzBin.com
+php,PHP Source Code File,Adobe Dreamweaver CC 2015 Eclipse PHP Development Tools Zend Studio MPSoftware phpDesigner ES-Computing EditPlus Blumentals WeBuilder Notepad++ WampServer Web browsers,The PHP group
+rss,Rich Site Summary,"BottomFeeder (Windows, Mac & Linux) Cynical Peak Cyndicate (Mac) FeedDemon (Windows) Mozilla Firefox (Windows, Mac & Linux) NewsFire (Mac) NewsGator NetNewsWire (Mac) NewzCrawler (Windows) RssReader (Windows) Utsire Shrook ( Mac)",
+webarchive,Safari Web Archive,Apple Safari (Windows & Mac) Apple TextEdit (Mac) Cruz (Mac) iCab (Mac),Apple
+webloc,Mac OS X Website Location,Apple Safari (Mac) Google Chrome (Mac) Mozilla Firefox (Mac) Mozilla SeaMonkey (Mac) Opera (Mac) Any text editor on a Windows system,Apple
+xfdl,Extensible Forms Description Language File,IBM Lotus Forms Viewer (Windows) Microsoft Notepad (Windows) Notepad++ (Windows) Any text editor,UWI
+xhtml,Extensible Hypertext Markup Language File,Adobe ColdFusion Builder 3 Adobe Dreamweaver CC 2015 Apple Safari Microsoft Internet Explorer Mozilla Firefox And other web browsers.,
